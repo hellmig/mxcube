@@ -27,6 +27,9 @@
 -->      
     </more>
   </motors>
+
+  <object role="beam_info" href="beam_info" />
+
   <samplechanger>/sc-mockup</samplechanger>
   <wagolight>/udiff_light</wagolight>
   <channel version="exp141b:spec" type="spec" name="auto_centring_flag">AUTO_CENTRING_FLAG</channel>

@@ -15,6 +15,8 @@
   <object href="/cryospy" role="cryo_stream"/>
   <object href="/resmot" role="resolution"/>
   <object href="/flux" role="flux"/>
+  <!-- object href="/beam_info" role="beam_info"/ -->
+  <object href="/pilatus" role="detector"/>
 
   <directory_prefix>/home/mxadm/diffdat</directory_prefix>
   <auto_processing_server>localhost:23640</auto_processing_server>

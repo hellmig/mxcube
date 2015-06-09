@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object class="Pilatus">
+   <manufacturer>DECTRIS</manufacturer>
+   <type>pilatus</type>
+   <model>Pilatus3_6M</model>
+   <file_suffix>cbf</file_suffix>
+
+   <!-- lima_device>id29/limaccd/id29</lima_device -->
+   <!-- pilatus_device>id29/limapilatus/p6m</pilatus_device -->
+   <!-- control>pilatus29</control -->
+   <!-- buffer>/lbsram</buffer -->
+   <minE>6.315</minE>
+   <deadtime>0.00095</deadtime>
+   <serial># Detector: PILATUS3 6M, S/N 60-0128, ESRF ID29</serial>
+   <minimum_exposure_time>0.02</minimum_exposure_time>
+   <default_exposure_time>0.02</default_exposure_time>
+
+   <px>0.172</px>
+   <py>0.172</py>
+   <width>424</width>
+   <height>435</height>
+
+    <beam>
+         <ax>-0.005</ax>
+         <ay>0.001</ay>
+         <bx>213.45</bx>
+         <by>215.51</by>
+    </beam>
+
+</object>
+

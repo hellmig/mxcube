@@ -416,7 +416,8 @@ class HutchMenuBrick(BlissWidget):
 	if beam_info is not None:
 	    beam_info['size_x'] = beam_info['size_x'] * self.pixels_per_mm[0]
 	    beam_info['size_y'] = beam_info['size_y'] * self.pixels_per_mm[1]
-        self.emit(PYSIGNAL("newCentredPos"), (state, centring_status, beam_info))
+	    self.emit(PYSIGNAL("newCentredPos"), (state, centring_status, beam_info))
+        
 
         if self.queue_hwobj.is_executing():
             self.disable()
@@ -626,6 +627,9 @@ class HutchMenuBrick(BlissWidget):
         try:
 	    self.pixels_per_mm = self.minidiff.get_pixels_per_mm()
 	    self.beam_position = self.beamInfo.get_beam_position()	
+	    beam_info = self.beamInfo.get_beam_info()	
+	    self.beam_size = (beam_info["size_x"], beam_info["size_y"])
+
         except:
             self.pixels_per_mm = [None, None] 
         if self.pixels_per_mm[0] is not None\
