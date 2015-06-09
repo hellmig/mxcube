@@ -1,0 +1,11 @@
+<device class="MD2v4_Holderlength">
+  <username>Holder length</username>
+  <tangoname>bl141/microdiff/general</tangoname>
+  <motor_name>PhiTableYAxis</motor_name>
+  <GUIstep>1.0</GUIstep>
+  <channel type="tango" name="motor_attr" tangoname="bl141/microdiff/general" polling="events">PhiTableYAxisPosition</channel>
+  <channel type="tango" name="motor_state" tangoname="bl141/microdiff/general" polling="events">State</channel>
+  <channel type="tango" name="motor_states" tangoname="bl141/microdiff/general" polling="events">MotorStates</channel>
+  <command type="tango" name="motor_abort" tangoname="bl141/microdiff/general">Reset</command>
+  <channel type="tango" name="length_attr" tangoname="bl141/microdiff/general" polling="events">SampleHolderLength</channel>
+</device>

@@ -1,0 +1,8 @@
+<device class="InOut">
+  <username>Microdiff light</username>
+  <specversion>exp141b:spec</specversion>
+  <offset>0</offset>
+  <command type="spec" name="set_in">lightin</command>
+  <command type="spec" name="set_out">lightout</command>
+  <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">BackLightIsOn</channel>
+</device>

@@ -1,0 +1,7 @@
+<device class="InOut">
+  <username>Detcover</username>
+  <specversion>exp141b:spec</specversion>
+  <command type="spec" name="set_out">detcoverout</command>
+  <command type="spec" name="set_in">detcoverin</command>
+   <channel type="spec" name="state">DETCOVER_STATE</channel>
+</device>

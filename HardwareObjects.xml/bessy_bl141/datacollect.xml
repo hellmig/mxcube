@@ -1,0 +1,29 @@
+<procedure class="DataCollect">
+  <specversion>exp141b:spec</specversion>
+  <command type="spec" name="macroCollect">datacollection</command>
+  <channel type="spec" name="arguments">datacollection_parameters</channel>
+  <channel type="spec" name="imageCollected">CURRENT_IMAGE</channel>
+  <command type="spec" name="macroGetParameters">update_collect_parameters</command>
+  <command type="spec" name="macroValidateParameters">validate_collect_parameters</command>
+  <channel type="spec" name="stopscan">STOP_COLLECT_LOOP</channel>
+  <channel type="spec" name="messages">eprodc_log_message</channel>
+  <!-- <channel type="spec" name="fatalMessages">eprodc_fatal_message</channel> -->
+  <dbserver>/dbconnection</dbserver>
+  <safetyshutter>/safshut</safetyshutter>
+  <!-- <samplechanger>/sc</samplechanger> -->
+  <slitbox>/slitbox</slitbox>
+  <!--<cryostream>/cryospy</cryostream> -->
+  <!--<transmission>/attenuators</transmission> -->
+  <transmission>/escfilters</transmission>
+  <machcurrent>/mach</machcurrent>
+  <mxlocal>/spec/mxlocal</mxlocal>
+  <energyscan>/energyscan</energyscan>
+  <detdistmotor>/distccd</detdistmotor>
+  <resmotor>/resolution</resmotor>
+  <!--  <minidiff>/microdiff</minidiff> -->
+  <minidiff>/udiff</minidiff>
+  <!--<directoryprefix>/141dat/pxrdat</directoryprefix>-->
+  <directoryprefix>/141dat/${DIFFDATSEL}/${USER}</directoryprefix>
+  <!-- <ssrlimageserver>/imgserver</ssrlimageserver> -->
+  <channel type="spec" name="detector">MXBCM_PARS["detector"]["type"]</channel>
+</procedure>

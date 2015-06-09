@@ -1,0 +1,6 @@
+<device class = "SpecMotor">
+  <username>Upstream Vert Gap</username>
+  <specname>s1vsize</specname>
+  <specversion>exp141b:spec</specversion>
+  <GUIstep>0.010</GUIstep>
+</device>

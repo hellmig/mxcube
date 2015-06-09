@@ -1,0 +1,51 @@
+<procedure class="processing">>
+	<dbhost>ispyb</dbhost>
+	<dbuser>pxuser</dbuser>
+	<dbpass>ispyuser</dbpass>
+	<db>pydb</db>  
+	<!-- program is an object so that more than one program can be embedded -->
+
+
+	<program>
+		<name>xds keep up mode</name>
+		<version></version>
+		<executable>/opt/pxsoft/bin/autoproc_master.pl</executable>
+		<opts>-path</opts>
+		<processEvent>before</processEvent>
+	</program>
+
+	<!-- comment that out to deactivate the edna autoprocessing -->
+	<program>
+		<name>edna autoproc fast processing</name>
+		<version></version>
+		<executable>/users/blissadm/bin/autoproc-launcher.py</executable>
+		<opts>-path</opts>
+		<processEvent>before</processEvent>
+	</program>
+
+	<program>
+		<name>image analysis</name>
+		<version></version>
+		<executable>/opt/pxsoft/bin/autoproc_master.pl</executable>
+		<opts>-path</opts>
+		<processEvent>image</processEvent>
+	</program>
+
+	<program>
+		<name>after collect xds</name>
+		<version></version>
+		<executable>/opt/pxsoft/bin/autoproc_master.pl</executable>
+		<opts>-path</opts>
+		<processEvent>after</processEvent>
+	</program>
+
+	<program>
+		<name>end of queue</name>
+		<version></version>
+		<executable>/opt/pxsoft/bin/autoproc_master.pl</executable>
+		<opts>-path</opts>
+		<processEvent>end_multicollect</processEvent>
+	</program>
+
+</procedure>
+

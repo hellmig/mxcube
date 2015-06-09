@@ -1,0 +1,5 @@
+<device class="MD2v4_FastShutter">
+  <command type="tango" tangoname="bl141/microdiff/general" name="open_shutter_cmd">OpenFastShutter</command>
+  <command type="tango" tangoname="bl141/microdiff/general" name="close_shutter_cmd">CloseFastShutter</command>
+  <channel type="tango" name="dev_state" tangoname="bl141/microdiff/general" polling="events">FastShutterIsOpen</channel>
+</device>

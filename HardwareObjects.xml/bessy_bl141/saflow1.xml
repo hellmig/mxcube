@@ -1,0 +1,25 @@
+<procedure>
+  <channel type="epics" polling="1000" name="Sample flow [l/min]">CRYO141:GET_SAFL</channel>
+  <command>
+    <type>epics</type>
+    <name>Sample flow</name>
+    <toexecute>CRYO141:PUT_SAFL</toexecute>
+    <argument>
+      <name>Flow rate:</name>
+      <type>float</type>
+    </argument>
+  </command>
+  <channel type="epics" polling="1000" read_as_str="true" name="Control mode:">CRYO141:SET_REMOTE</channel>
+  <command>
+    <type>epics</type>
+    <name>Remote</name>
+    <toexecute>CRYO141:SET_REMOTE</toexecute>
+    <args>"Remote"</args>
+  </command>
+  <command>
+    <type>epics</type>
+    <name>Local</name>
+    <toexecute>CRYO141:SET_REMOTE</toexecute>
+    <args>"Local"</args>
+  </command>
+</procedure>

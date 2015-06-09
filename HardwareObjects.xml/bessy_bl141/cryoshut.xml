@@ -1,0 +1,7 @@
+<equipment>
+  <username>Cryoshutter</username>
+  <device role="csin" hwrid="/csin"/>
+  <device role="csout" hwrid="/csout"/>
+  <device role="gonio" hwrid="/md2phasenotif"/>
+</equipment>
+

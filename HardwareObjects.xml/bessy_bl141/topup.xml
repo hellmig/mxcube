@@ -1,0 +1,5 @@
+<device class = "TopupMode">
+  <username>Topup</username>
+  <channel type="epics" name="topup_mode" polling="1000" read_as_str="True">TOPUPCC:message</channel>
+</device>
+

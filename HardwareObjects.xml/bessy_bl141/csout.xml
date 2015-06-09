@@ -1,0 +1,8 @@
+<procedure>
+  <specversion>bl143:6789</specversion>
+  <command>
+	  <type>spec</type>
+	  <name>Clear cryostream</name>
+	  <toexecute>outcs_1</toexecute>
+  </command>
+</procedure>

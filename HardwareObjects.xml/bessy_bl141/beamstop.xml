@@ -1,0 +1,10 @@
+<equipment class="MD2v4_Beamstop">
+  <tangoname>bl141/microdiff/general</tangoname>
+  <username>Beamstop</username>
+  <channel type="tango" name="beamstop_attr" tangoname="bl141/microdiff/general" polling="events">CapillaryBSPredefinedPosition</channel>
+  <command type="tango" name="beamstop_cmd" tangoname="bl141/microdiff/general">CapillaryBSSaveInPosition</command>
+  <motors>
+    <device role="vertical" hwrid="/udiff_bstopz"></device>
+    <device role="horizontal" hwrid="/udiff_bstopy"></device>
+  </motors>
+</equipment>

@@ -1,0 +1,4 @@
+<device class="PhotonFluxDummy">
+  <username>Photon flux</username>
+  <device role="shutter" href="/safshut"/>
+</device> 

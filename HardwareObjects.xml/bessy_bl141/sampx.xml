@@ -1,0 +1,5 @@
+<device class="SpecMotor">
+  <username>Sample X</username>
+  <specversion>exp141b:spec</specversion>
+  <specname>sampx</specname>
+</device>

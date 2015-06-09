@@ -1,0 +1,3 @@
+<procedure class="EnergyScanData">
+  <channel version="bl141:spec" type="spec" name="energy_scan_data">data</channel>
+</procedure>

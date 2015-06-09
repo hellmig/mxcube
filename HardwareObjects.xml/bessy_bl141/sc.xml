@@ -1,0 +1,7 @@
+<equipment class = "SampleChangerMockup">
+  <username>Sample Changer / ID29-EH</username>
+  <specversion>id29:exp</specversion>
+  <tangoname>id29:20000/id29/scid29/general</tangoname>
+  <device hwrid="/wago/cryo"  role="Cryo"/>
+  <device hwrid="/wago/light" role="Light"/>
+</equipment>

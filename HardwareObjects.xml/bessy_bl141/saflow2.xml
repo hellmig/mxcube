@@ -1,0 +1,8 @@
+<procedure>
+  <command>
+    <type>epics</type>
+    <name>Remote</name>
+    <toexecute>CRYO143:SET_REMOTE</toexecute>
+    <args>"Remote"</args>
+  </command>
+</procedure>

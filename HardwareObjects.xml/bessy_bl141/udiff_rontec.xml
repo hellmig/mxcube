@@ -1,0 +1,8 @@
+<device class="InOut">
+  <username>Rontec detector</username>
+  <specversion>exp141b:spec</specversion>
+  <command type="spec" name="set_out">fldetout</command>
+  <command type="spec" name="set_in">fldetin</command>
+  <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">FluoDetectorIsBack</channel>
+  <offset>1</offset>
+</device>

@@ -1,0 +1,5 @@
+<device class = "MachCurrentEpicsSimple">
+  <username>Mach</username>
+  <channel type="epics" name="ring_current" polling="1000">MDIZ3T5G:current</channel>
+</device>
+

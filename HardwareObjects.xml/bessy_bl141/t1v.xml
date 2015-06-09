@@ -1,0 +1,6 @@
+<device class = "SpecMotor">
+  <username>Upstream Vert Offset</username>
+  <specname>s1vpos</specname>
+  <specversion>exp141b:spec</specversion>
+  <GUIstep>0.100</GUIstep>
+</device>

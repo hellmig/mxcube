@@ -1,0 +1,7 @@
+<device class="MD2v4_Light">
+  <username>Front light</username>
+  <tangoname>bl141/microdiff/general</tangoname>
+  <motor_name>Frontlight</motor_name>
+  <GUIstep>1.0</GUIstep>
+  <channel type="tango" name="position_attr" tangoname="bl141/microdiff/general" polling="events">FrontLightLevel</channel>
+</device>

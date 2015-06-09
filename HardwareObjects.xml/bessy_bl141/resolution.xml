@@ -1,0 +1,6 @@
+<equipment class="Resolution">
+  <device hwrid="/distccd" role="detm"/>
+  <device hwrid="/distccd" role="dtox"/>
+  <device hwrid="/monoang" role="wavelength"/>
+  <command type="spec" version="exp141b:spec" name="detector_radius">_getRadius</command>
+</equipment>

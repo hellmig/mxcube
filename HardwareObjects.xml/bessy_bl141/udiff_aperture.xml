@@ -1,0 +1,8 @@
+<device class="InOut">
+  <username>Microdiff aperture</username>
+  <specversion>exp141b:spec</specversion>
+  <offset>2</offset>
+  <command type="spec" name="set_in">aperturein</command>
+  <command type="spec" name="set_out">apertureout</command>
+  <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">AperturePredefinedPosition</channel>
+</device>

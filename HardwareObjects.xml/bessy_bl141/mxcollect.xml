@@ -1,0 +1,68 @@
+<object class="BESSY141MultiCollect">
+  <specversion>exp141b:spec</specversion>
+  
+  <!-- <object href="/dbconnection" role="dbserver"/> -->
+  <object href="/safshut" role="safety_shutter"/>
+  <object href="/spec/mxlocal" role="beamline_configuration"/>
+  <object href="/udiff" role="diffractometer"/>
+  <object href="/sc-mockup" role="sample_changer"/>
+  <!-- <object href="/energyscan" role="energy"/> -->
+  <object href="/energy" role="energy"/>
+  <object href="/escfilters" role="transmission"/>
+  <object href="/distccd" role="detector_distance"/>
+  <object href="/mach" role="machine_current"/>
+  <!-- <object href="/feshut" role="undulators"/> -->
+  <object href="/cryospy" role="cryo_stream"/>
+  <object href="/resmot" role="resolution"/>
+  <object href="/flux" role="flux"/>
+
+  <directory_prefix>/home/mxadm/diffdat</directory_prefix>
+  <auto_processing_server>localhost:23640</auto_processing_server>
+  <input_files_server>localhost:5698</input_files_server>
+
+  <command type="spec" name="get_resolution_at_corner">getMxResolutionAtCorner</command>
+  <command type="spec" name="get_beam_size_x">getMxBeamSizeX</command>
+  <command type="spec" name="get_beam_size_y">getMxBeamSizeY</command>
+  <command type="spec" name="get_slit_gap_h">getMxSlitGapHorizontal</command>
+  <command type="spec" name="get_slit_gap_v">getMxSlitGapVertical</command>
+  <command type="spec" name="get_beam_shape">getMxBeamShape</command>
+  <command type="spec" name="get_beam_centre_x">getMxBeamCentreX</command>
+  <command type="spec" name="get_beam_centre_y">getMxBeamCentreY</command>
+  <command type="spec" name="close_fast_shutter">msclose</command>
+  <command type="spec" name="open_fast_shutter">msopen</command>
+  <command type="spec" name="adjust_gains">adjust_i0_i1_gain</command>
+  <command type="spec" name="prepare_oscillation">osc_prepare</command>
+  <channel type="spec" name="parameters">datacollection_parameters</channel>
+  <command type="spec" name="build_collect_seq">build_collect_seq</command>
+  <command type="spec" name="validate_collect_parameters">validate_collect_parameters</command>
+  <command type="spec" name="do_oscillation">osc_scan</command>
+  <command type="spec" name="prepare_acquisition">pilatus_prep</command>
+  <command type="spec" name="start_acquisition">ccdstart</command>
+  <command type="spec" name="flush_detector">ccdflush</command>
+  <channel type="spec" name="image_intensity">CURRENT_IMAGE_INTENSITY</channel>
+  <channel type="spec" name="shutterless">PILATUS_SHUT</channel>
+  <command type="spec" name="local_set_experiment_type">pilatus_set_experiment_type</command>
+  <command type="spec" name="specific_collect_frame_hook">pilatus_postframe_actions</command>
+  <command type="spec" name="prepare_beamline">prodc_prepare_beamline</command>  
+  <command type="spec" version="exp141b:spec" name="data_collection_cleanup">specific_finish_beamline</command>
+  <command type="spec" version="exp141b:spec" name="reset_detector">mxcube_stop_pilatus_acq</command>
+  <channel type="spec" version="exp141b:spec" name="xds_filename">XDS_INPUT_FILENAME</channel>
+  <channel type="spec" version="exp141b:spec" name="spec_messages">eprodc_log_message</channel>
+  <channel type="spec" version="exp141b:spec" name="detector">MXBCM_PARS["detector"]["cansum"]</channel>
+  <!-- helical
+  ID 23
+  <channel type="spec" version="exp141b:spec" name="helical">HELICAL_OSCIL</channel>
+  <channel type="spec" version="exp141b:spec" name="helical_pos">HELICAL_OSCIL_POS</channel>
+  <channel type="spec" version="exp141b:spec" name="helical_pars">HELICAL_PARS</channel>
+  -->
+  <!-- helical
+  ID 29 -->
+  <channel type="spec" version="exp141b:spec" name="helical">HELICAL_SCAN4D</channel>
+  <channel type="spec" version="exp141b:spec" name="helical_pos">HELICAL_OSCIL_POS</channel>
+  <channel type="spec" version="exp141b:spec" name="helical_pars">HELICAL_PARS</channel>
+  <channel type="spec" version="exp141b:spec" name="scan4d">HELICAL_SCAN4D</channel>
+  <channel type="spec" version="exp141b:spec" name="scan4dm">HELICAL_SCAN4D_MANUAL</channel>
+  <command type="spec" version="exp141b:spec" name="helical_queue">helical_queue</command>
+  <command type="spec" version="exp141b:spec" name="helical_off">helical_scan4d_off</command>
+  <!-- -->
+</object>

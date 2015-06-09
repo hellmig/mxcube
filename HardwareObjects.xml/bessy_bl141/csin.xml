@@ -1,0 +1,12 @@
+<procedure>
+  <specversion>bl143:6789</specversion>
+  <command>
+    <type>spec</type>
+    <name>Block cryostream</name>
+    <argument>
+      <name>t [s]</name>
+      <type>integer</type>
+    </argument>
+    <toexecute>incs_select_1</toexecute>
+  </command>
+</procedure>

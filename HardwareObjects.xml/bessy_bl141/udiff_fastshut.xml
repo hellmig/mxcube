@@ -1,0 +1,8 @@
+<device class="InOut">
+  <username>Fast shutter</username>
+  <specversion>exp141b:spec</specversion>
+  <offset>0</offset>
+  <command type="spec" name="set_in">msopen</command>
+  <command type="spec" name="set_out">msclose</command>
+  <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">FastShutterIsOpen</channel>
+</device>

@@ -1,0 +1,6 @@
+<device class = "SpecMotor">
+  <username>Downstream Vert Gap</username>
+  <specname>s2vsize</specname>
+  <specversion>exp141b:spec</specversion>
+  <GUIstep>0.010</GUIstep>
+</device>

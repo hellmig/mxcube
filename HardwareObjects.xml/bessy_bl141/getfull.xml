@@ -1,0 +1,5 @@
+<procedure>
+  <specversion>bl141:spec</specversion>
+  <channel type="spec" name="Beam intensity [nA]">I_IC</channel>
+  <command type="spec" name="Update beamline status">getfull</command>
+</procedure>

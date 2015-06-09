@@ -1,0 +1,7 @@
+<device class = "Camera">
+  <username>Falcon VideoCam</username>
+  <tangoname>bl141/falcon/1</tangoname>
+  <interval>100</interval>
+  <imagetype>jpeg</imagetype>
+</device>
+
