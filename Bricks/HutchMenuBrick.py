@@ -765,7 +765,9 @@ class HutchMenuBrick(BlissWidget):
                                                     self.beam_position[1],
                                                     self.beam_size[0],\
                                                     self.beam_size[1]))
-	self.updateBeam(True)
+        self.updateBeam(True)
+        # the following is to provoke updating the shapes !
+        self.minidiff.phiMotorStateChanged( self.minidiff.phiMotor.getState())
 
     def beamInfoChanged(self, beam_info):
         self.beam_size = (beam_info["size_x"], beam_info["size_y"])

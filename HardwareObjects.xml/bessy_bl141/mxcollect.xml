@@ -22,6 +22,8 @@
   <auto_processing_server>localhost:23640</auto_processing_server>
   <input_files_server>localhost:5698</input_files_server>
 
+  <channel type="tango" tangoname="bl141/lima/camera" name="last_image_saved">last_image_saved</channel>
+
   <command type="spec" name="get_resolution_at_corner">getMxResolutionAtCorner</command>
   <command type="spec" name="get_beam_size_x">getMxBeamSizeX</command>
   <command type="spec" name="get_beam_size_y">getMxBeamSizeY</command>

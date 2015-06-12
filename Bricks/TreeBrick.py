@@ -30,6 +30,7 @@ class TreeBrick(BaseComponents.BlissWidget):
         self._lims_hwobj = None
         self.sample_changer = None
         self.queue_hwobj = None
+        self._logged_in = False
 
         # Properties
         self.addProperty("holderLengthMotor", "string", "")
@@ -223,11 +224,16 @@ class TreeBrick(BaseComponents.BlissWidget):
                              self.sample_load_state_changed)
                 self.connect(self.sample_changer_hwobj, SampleChanger.INFO_CHANGED_EVENT, 
                              self.set_sample_pin_icon)
+                self.connect(self.sample_changer_hwobj, SampleChanger.INFO_CHANGED_EVENT, 
+                             self.sample_changer_contents_changed)
 
             has_shutter_less = bl_setup.detector_has_shutterless()
 
             if has_shutter_less:
                 self.dc_tree_widget.confirm_dialog.disable_dark_current_cbx()
+
+            if self._lims_hwobj is None or (self._lims_hwobj.__class__.__name__ == 'ISPyBClient2Mockup'):
+                self.sample_changer_widget.child('synch_button').hide()
 
         elif property_name == 'xml_rpc_server':
             xml_rpc_server_hwobj = self.getHardwareObject(new_value)
@@ -251,11 +257,16 @@ class TreeBrick(BaseComponents.BlissWidget):
         The signal is emitted when a user was succesfully logged in.
         """
         self.enable_collect(logged_in)
+        self._logged_in = logged_in
         
         #sc_content = self.get_sc_content()
+        self.refresh_tree()
+
+    def refresh_tree(self):
+
         sc_basket_content, sc_sample_content = self.get_sc_content()
         
-        if not logged_in:
+        if not self._logged_in:
             self.dc_tree_widget.populate_free_pin()
 
             if sc_basket_content and sc_sample_content:
@@ -348,6 +359,10 @@ class TreeBrick(BaseComponents.BlissWidget):
            
             basket_list = sc_basket_list
 
+            #sc_content = self.get_sc_content()
+            #sc_sample_list = self.dc_tree_widget.\
+            #                 samples_from_sc_content(sc_content)
+            
             for sc_sample in sc_sample_list:
                 # Get the sample in lims with the barcode
                 # sc_sample.code
@@ -412,7 +427,8 @@ class TreeBrick(BaseComponents.BlissWidget):
                 basket_index = basket.getIndex()
                 basket_code = basket.getID() or ""
                 is_present = basket.isPresent()
-                sc_basket_content.append((basket_index+1, basket)) #basket_code, is_present)) 
+                if is_present:
+                    sc_basket_content.append((basket_index+1, basket)) #basket_code, is_present)) 
 
             for sample in self.sample_changer_hwobj.getSampleList():
                 coords = sample.getCoords()
@@ -461,6 +477,24 @@ class TreeBrick(BaseComponents.BlissWidget):
         s_color = SC_STATE_COLOR.get(state, "UNKNOWN")
         self.sample_changer_widget.child('details_button').\
             setPaletteBackgroundColor(qt.QColor(s_color))
+
+    def sample_changer_contents_changed(self):
+        """
+        Connected to the event INFO_CHANGED of the sample changer hardware object
+        The signal is emitted when the load state of the SC changes 
+        """
+        logging.info("sample changer contents changed")
+        self.refresh_tree()
+        return
+
+        #sc_content = self.get_sc_content()
+       # 
+       # self.dc_tree_widget.populate_free_pin()
+       # if sc_content:
+       #     sc_sample_list = self.dc_tree_widget.samples_from_sc_content(sc_content)
+       #     self.dc_tree_widget.populate_list_view(sc_sample_list)
+       #     self.sample_changer_widget.child('filter_cbox').setCurrentItem(0)
+       # self.dc_tree_widget.sample_list_view_selection()
 
     def show_sample_centring_tab(self):
         self.sample_changer_widget.child('details_button').setText("Show SC-details")

@@ -39,9 +39,9 @@ class CatsMaintBrick(BaseComponents.BlissWidget):
         qt.QObject.connect(self.widget.btRegulationOn, qt.SIGNAL('clicked()'), self._regulationOn)                     
                 
         self.device=None
-        self._pathRunning = None
-        self._poweredOn = None
-        self._regulationOn = None
+        self._pathRunning = False
+        self._poweredOn = False
+        self._regulationOn = False
 
         self._lid1State = False
         self._lid2State = False
