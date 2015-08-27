@@ -1,0 +1,8 @@
+<device class = "CatsTest">
+  <tangoname>bl141/cats/1</tangoname>    
+  <specversion>exp141b:alex</specversion>    
+  <command type="spec" name="Open">openlid1</command>
+  <channel type="tango" tangoname="bl141/lima/camera" name="last_image_saved">last_image_saved</channel>
+  <command type="tango" name="Close">closelid1</command>
+</device>
+
