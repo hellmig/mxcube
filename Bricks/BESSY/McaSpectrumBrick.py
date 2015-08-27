@@ -45,6 +45,7 @@ from BlissFramework.BaseComponents import BlissWidget
 #print Icons.__file__
 #from PyMca import McaAdvancedFit
 import MXCuBEAdvancedFit
+
 import numpy.oldnumeric as Numeric
 from PyMca import ConfigDict
 
@@ -57,8 +58,9 @@ class McaSpectrumBrick(BlissWidget):
         self.addProperty("disableSpectrumFit", "boolean", False)
         self.disableSpectrumFit = False
         
-        self.mcafit = MXCuBEAdvancedFit.MXCuBEAdvancedFit(self)
         #self.mcafit = McaAdvancedFit.McaAdvancedFit(self)
+        self.mcafit = MXCuBEAdvancedFit.MXCuBEAdvancedFit(self)
+        
         self.mcafit.dismissButton.hide()
         QVBoxLayout(self)        
         self.layout().addWidget(self.mcafit)
@@ -107,12 +109,10 @@ class McaSpectrumBrick(BlissWidget):
 
     def _fit(self):
         if self.disableSpectrumFit:
-            #return self.mcafit.mxcubefit()
-            #return self.mcafit.fit()
             return self.mcafit.plot()
         else:
-            return self.mcafit.mxcubefit()
             #return self.mcafit.fit()
+            return self.mcafit.mxcubefit()
 
     def _configure(self,config):
         d = ConfigDict.ConfigDict()
