@@ -2,18 +2,18 @@
 <object class="Pilatus">
    <manufacturer>DECTRIS</manufacturer>
    <type>pilatus</type>
-   <model>Pilatus3_6M</model>
+   <model>Pilatus2_6M</model>
    <file_suffix>cbf</file_suffix>
 
-   <!-- lima_device>id29/limaccd/id29</lima_device -->
-   <!-- pilatus_device>id29/limapilatus/p6m</pilatus_device -->
-   <!-- control>pilatus29</control -->
-   <!-- buffer>/lbsram</buffer -->
-   <minE>6.315</minE>
-   <deadtime>0.00095</deadtime>
-   <serial># Detector: PILATUS3 6M, S/N 60-0128, ESRF ID29</serial>
-   <minimum_exposure_time>0.02</minimum_exposure_time>
-   <default_exposure_time>0.02</default_exposure_time>
+   <!-- lima_device>bl141/lima/camera</lima_device -->
+   <!-- pilatus_device>bl141/limapilatus/p6m</pilatus_device -->
+   <!-- control>exp141b</control -->
+   <!-- buffer>/lima_data</buffer -->
+   <minE>5.0</minE>
+   <deadtime>0.003</deadtime>
+   <serial># Detector: PILATUS 6M, S/N 60-0118</serial>
+   <minimum_exposure_time>0.1</minimum_exposure_time>
+   <default_exposure_time>0.1</default_exposure_time>
 
    <px>0.172</px>
    <py>0.172</py>
@@ -21,11 +21,10 @@
    <height>435</height>
 
     <beam>
-         <ax>-0.005</ax>
-         <ay>0.001</ay>
-         <bx>213.45</bx>
-         <by>215.51</by>
+        <ax>0.000001</ax>
+        <ay>0.000001</ay>
+        <bx>215.000</bx>
+        <by>210.528</by>
     </beam>
-
 </object>
 

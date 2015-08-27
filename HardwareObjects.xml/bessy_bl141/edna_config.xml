@@ -1,6 +1,6 @@
 <procedure class="EDNACharacterise">
   <StartEdnaCommand>/home/mxadm/bessy/bin/edna_script.sh</StartEdnaCommand>
-  <edna_default_file>/home/mxadm/bessy/hwr.xml/edna_defaults.xml</edna_default_file>
+  <edna_default_file>/home/mxadm/mxcube/HardwareObjects.xml/bessy_bl141/edna_defaults.xml</edna_default_file>
   <!-- <fluxSource>currentFlux</fluxSource> -->
   <fluxSource>default</fluxSource>
   <device href="/spec/mxlocal" role="beamline_pars"/>
