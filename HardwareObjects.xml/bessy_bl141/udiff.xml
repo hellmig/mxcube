@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <equipment class="MD2v4">
   <username>Microdiff</username>
-  <device role="camera" hwrid="/falcon"></device>
+  <device role="camera" hwrid="/falcon_jpeg"></device>
   <motors>
     <phi>
       <device role="phi" hwrid="/udiff_omega"></device>

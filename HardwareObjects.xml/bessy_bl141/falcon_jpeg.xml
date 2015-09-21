@@ -1,7 +1,7 @@
 <device class = "Camera">
   <username>Falcon VideoCam</username>
   <tangoname>bl141/falcon/1</tangoname>
-  <interval>40</interval>
+  <interval>10</interval>
   <imagetype>jpeg</imagetype>
 </device>
 
