@@ -32,16 +32,16 @@
 
   <samplechanger>/sc-mockup</samplechanger>
   <wagolight>/udiff_light</wagolight>
-  <channel version="exp141b:spec" type="spec" name="auto_centring_flag">AUTO_CENTRING_FLAG</channel>
-  <channel version="exp141b:spec" type="spec" name="auto_loop_centring_enabled">ENABLE_AUTO_LOOP_CENTRING</channel>
-  <channel version="exp141b:spec" type="spec" name="auto_crystal_centring_enabled">ENABLE_AUTO_CRYSTAL_CENTRING</channel>
-  <channel version="exp141b:spec" type="spec" name="playback_centring_enabled">ENABLE_PLAYBACK_CENTRING</channel>
-  <command version="exp141b:spec" type="spec" name="getBeamSizeX">getMxBeamSizeX</command>
-  <command version="exp141b:spec" type="spec" name="getBeamSizeY">getMxBeamSizeY</command>
-  <command version="exp141b:spec" type="spec" name="getBeamShape">getMxBeamShape</command>
+  <channel version="falc141:spec" type="spec" name="auto_centring_flag">AUTO_CENTRING_FLAG</channel>
+  <channel version="falc141:spec" type="spec" name="auto_loop_centring_enabled">ENABLE_AUTO_LOOP_CENTRING</channel>
+  <channel version="falc141:spec" type="spec" name="auto_crystal_centring_enabled">ENABLE_AUTO_CRYSTAL_CENTRING</channel>
+  <channel version="falc141:spec" type="spec" name="playback_centring_enabled">ENABLE_PLAYBACK_CENTRING</channel>
+  <command version="falc141:spec" type="spec" name="getBeamSizeX">getMxBeamSizeX</command>
+  <command version="falc141:spec" type="spec" name="getBeamSizeY">getMxBeamSizeY</command>
+  <command version="falc141:spec" type="spec" name="getBeamShape">getMxBeamShape</command>
   <!-- 2011-08-26-mh: add new spec command which is used from the HutchMenuBrick -->
   <!--                to-do: find out where this command is found in ESRF sources -->
-  <command version="exp141b:spec" type="spec" name="getBeamInfo">getMxBeamInfo</command>
+  <command version="falc141:spec" type="spec" name="getBeamInfo">getMxBeamInfo</command>
   <!-- 2011-08-26-mh: end -->
   <channel type="tango" name="beam_pos_x" tangoname="bl141/microdiff/general" polling="events">BeamPositionHorizontal</channel>
   <channel type="tango" name="beam_pos_y" tangoname="bl141/microdiff/general" polling="events">BeamPositionVertical</channel>

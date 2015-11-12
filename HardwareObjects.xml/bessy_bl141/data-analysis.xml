@@ -3,6 +3,6 @@
   <edna_command>/home/mxadm/bessy/bin/edna_script.sh</edna_command>
   <edna_default_file>/home/mxadm/mxcube/HardwareObjects.xml/bessy_bl141/edna_defaults.xml</edna_default_file>
   <object href="/mxcollect" role="collect"/>
-  <command type="spec" version="exp141b:spec" name="get_beam_size_x">getMxBeamSizeX</command>
-  <command type="spec" version="exp141b:spec" name="get_beam_size_y">getMxBeamSizeY</command>
+  <command type="spec" version="falc141:spec" name="get_beam_size_x">getMxBeamSizeX</command>
+  <command type="spec" version="falc141:spec" name="get_beam_size_y">getMxBeamSizeY</command>
 </object>

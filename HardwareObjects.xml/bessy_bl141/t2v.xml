@@ -1,6 +1,6 @@
 <device class = "SpecMotor">
   <username>Downstream Vert Offset</username>
   <specname>s2vpos</specname>
-  <specversion>exp141b:spec</specversion>
+  <specversion>falc141:spec</specversion>
   <GUIstep>0.1</GUIstep>
 </device>

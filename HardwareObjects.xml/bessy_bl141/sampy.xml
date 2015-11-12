@@ -1,5 +1,5 @@
 <device class="SpecMotor">
   <username>Sample Y</username>
-  <specversion>exp141b:spec</specversion>
+  <specversion>falc141:spec</specversion>
   <specname>sampy</specname>
 </device>

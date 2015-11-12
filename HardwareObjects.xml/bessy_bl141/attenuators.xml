@@ -1,6 +1,6 @@
 <device class = "Attenuators">
   <username>Attenuators</username>
-  <specversion>exp141b:spec</specversion>
+  <specversion>falc141:spec</specversion>
   <command type="spec" name="toggle">attio</command>
   <command type="spec" name="setTransmission">transmission</command>
   <channel type="spec" name="attstate">MATT_STATE</channel>

@@ -1,6 +1,6 @@
 <device class="InOut">
   <username>Cryostream</username>
-  <specversion>exp141b:spec</specversion>
+  <specversion>falc141:spec</specversion>
   <command type="spec" name="set_out">cryout</command>
   <command type="spec" name="set_in">cryoin</command>
   <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">CryoIsBack</channel>

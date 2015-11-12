@@ -1,5 +1,5 @@
 <procedure>
-  <specversion>exp141b:spec</specversion>
+  <specversion>falc141:spec</specversion>
 <!--
   <command type="spec" name="Centre beam">centrebeam</command>
   <command type="spec" name="Quick realign">prodc_quick_realign</command>

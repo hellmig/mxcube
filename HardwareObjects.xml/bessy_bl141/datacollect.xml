@@ -1,5 +1,5 @@
 <procedure class="DataCollect">
-  <specversion>exp141b:spec</specversion>
+  <specversion>falc141:spec</specversion>
   <command type="spec" name="macroCollect">datacollection</command>
   <channel type="spec" name="arguments">datacollection_parameters</channel>
   <channel type="spec" name="imageCollected">CURRENT_IMAGE</channel>

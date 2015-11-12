@@ -1,6 +1,6 @@
 <device class = "SpecMotor">
   <username>Phi</username>
   <specname>phi</specname>
-  <specversion>exp141b:spec</specversion>
+  <specversion>falc141:spec</specversion>
   <GUIstep>90.0</GUIstep>
 </device>
