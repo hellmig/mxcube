@@ -1,5 +1,4 @@
 <object class="BeamlineSetup" role="BeamlineSetup">
-  <!-- Objects directly associatd with hardware -->
   <object href="/escfilters" role="transmission"/>
   <object href="/udiff" role="diffractometer"/>
   <!-- <object href="/sc-mockup" role="sample_changer"/>     -->
