@@ -58,6 +58,7 @@ class Qt4_TreeBrick(BlissWidget):
         self.sample_changer_one_hwobj = None
         self.sample_changer_two_hwobj = None
         self.queue_hwobj = None
+        self.diffractometer_hwobj = None
 
         # Internal variables --------------------------------------------------
         #self.current_cpos = None
@@ -218,8 +219,10 @@ class Qt4_TreeBrick(BlissWidget):
         elif property_name == 'beamline_setup':
             bl_setup = self.getHardwareObject(new_value)
             self.dc_tree_widget.beamline_setup_hwobj = bl_setup
-            self.sample_changer_one_hwobj = bl_setup.sample_changer_one_hwobj
-            self.sample_changer_two_hwobj = bl_setup.sample_changer_two_hwobj
+            if hasattr(bl_setup, 'sample_changer_one_hwobj'):
+                self.sample_changer_one_hwobj = bl_setup.sample_changer_one_hwobj
+            if hasattr(bl_setup, 'sample_changer_two_hwobj'):
+                self.sample_changer_two_hwobj = bl_setup.sample_changer_two_hwobj
             self.session_hwobj = bl_setup.session_hwobj
             self.lims_hwobj = bl_setup.lims_client_hwobj
 
@@ -242,6 +245,9 @@ class Qt4_TreeBrick(BlissWidget):
 
             if has_shutter_less:
                 self.dc_tree_widget.confirm_dialog.disable_dark_current_cbx()
+
+            if hasattr(bl_setup, 'diffractometer_hwobj'):
+                self.diffractometer_hwobj = bl_setup.diffractometer_hwobj
         elif property_name == 'xml_rpc_server':
             xml_rpc_server_hwobj = self.getHardwareObject(new_value)
 
