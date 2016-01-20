@@ -8,7 +8,9 @@ sys.path.insert(0, MXCUBE_ROOT)
 os.environ["CUSTOM_BRICKS_PATH"]=os.path.join(MXCUBE_ROOT, "Bricks")
 os.environ["CUSTOM_HARDWARE_OBJECTS_PATH"]=os.path.join(MXCUBE_ROOT, "HardwareObjects")
 
+import BlissFramework
 from BlissFramework import startGUI
+BlissFramework.set_gui_version("qt3")
 
 startGUI.run()
 
