@@ -1,0 +1,12 @@
+<object class="BESSY141BeamInfo">
+    <!-- defaultBeamDivergence></defaultBeamDivergence>
+    <device role="camera" hwrid="/ccd/prosilica_md2"/ -->
+    <device role="camera" hwrid="/falcon_jpeg"/>
+    <device role="aperture" hwrid="/udiff_aperturemot"/>
+    <beam_size_slits>0.2 0.2</beam_size_slits>
+    <beam_divergence_vertical>6.5</beam_divergence_vertical>
+    <beam_divergence_horizontal>104</beam_divergence_horizontal>
+    <channel type="tango" tangoname="bl141/microdiff/general" polling="events" name="beam_horizontal_position">BeamPositionHorizontal</channel>
+    <channel type="tango" tangoname="bl141/microdiff/general" polling="events" name="beam_vertical_position">BeamPositionVertical</channel>
+</object>
+

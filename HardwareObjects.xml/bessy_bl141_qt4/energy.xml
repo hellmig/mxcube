@@ -1,0 +1,5 @@
+<equipment class="Energy">
+    <object href="/energymot" role="energy"/>
+    <tunable_energy>True</tunable_energy>
+    <command type="spec" version="falc141:spec" name="moveEnergy">prodc_set_mono</command>
+</equipment>

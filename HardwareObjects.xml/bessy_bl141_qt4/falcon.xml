@@ -1,0 +1,9 @@
+<device class = "Camera">
+  <username>Falcon VideoCam</username>
+  <tangoname>bl141/falcon/1</tangoname>
+  <!-- <bpmname>bl141/falcon/2</bpmname> -->
+  <interval>40</interval>
+  <!-- <imagetype>jpeg</imagetype> -->
+  <imagetype>mmap:/tmp/falconBuffer</imagetype>
+</device>
+

@@ -1,0 +1,11 @@
+<equipment class="MD2v4_ApertureAlign">
+  <username>Aperture</username>
+  <tangoname>bl141/microdiff/general</tangoname>
+  <offset>2</offset>
+  <channel type="tango" name="aperture_attr" tangoname="bl141/microdiff/general" polling="events">AperturePredefinedPosition</channel>
+  <command type="tango" name="aperture_cmd" tangoname="bl141/microdiff/general">ApertureSaveInPosition</command>
+  <motors>
+    <device role="vertical" hwrid="/udiff_apz"></device>
+    <device role="horizontal" hwrid="/udiff_apy"></device>
+  </motors>
+</equipment>

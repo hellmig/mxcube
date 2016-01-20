@@ -1,0 +1,5 @@
+<device class="SpecMotor">
+  <username>Distance</username>
+  <specversion>falc141:spec</specversion>
+  <specname>distccd</specname>
+</device>

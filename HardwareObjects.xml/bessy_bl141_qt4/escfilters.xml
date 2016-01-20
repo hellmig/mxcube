@@ -1,0 +1,34 @@
+<equipment class="EscFilters">
+  <username>EscFilters</username>
+  <tangoname>bl141/esc/general</tangoname>
+  <device role="energy" href="/energymot"/>
+  <atte>
+     <label>Al 0.03 mm</label>
+     <bits>1</bits>
+  </atte>
+  <atte>
+     <label>Al 0.06 mm</label>
+     <bits>2</bits>
+  </atte>
+  <atte>
+     <label>Al 0.12 mm</label>
+     <bits>4</bits>
+  </atte>
+  <atte>
+     <label>Al 0.24 mm</label>
+     <bits>8</bits>
+  </atte>
+  <atte>
+     <label>Al 0.48 mm</label>
+     <bits>16</bits>
+  </atte>
+  <atte>
+     <label>Al 0.96 mm</label>
+     <bits>32</bits>
+  </atte>
+  <atte>
+     <label>Al 1.92 mm</label>
+     <bits>64</bits>
+  </atte>
+</equipment>
+

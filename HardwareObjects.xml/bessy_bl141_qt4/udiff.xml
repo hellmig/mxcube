@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<equipment class="MD2v4">
+  <username>Microdiff</username>
+  <device role="camera" hwrid="/falcon_jpeg"></device>
+  <motors>
+    <phi>
+      <device role="phi" hwrid="/udiff_omega"></device>
+      <device role="phiz" hwrid="/udiff_phiz"></device>
+    </phi>
+    <sample>
+      <device role="zoom" hwrid="/udiff_zoom"/>
+      <device role="lightLevel" hwrid="/udiff_lightmot"/>
+      <device role="light" hwrid="/udiff_lightmot"/>
+      <!-- <device role="lightInOut" hwrid="/udiff_light"/> -->
+      <device role="focus" hwrid="/udiff_phix"/>
+      <device role="phiy" hwrid="/udiff_phiy"/>
+      <device role="sampx" hwrid="/udiff_sampx"/>
+      <device role="sampy" hwrid="/udiff_sampy"/>
+      <device role="kappa" hwrid="/udiff_kappa"/>
+      <device role="kappa_phi" hwrid="/udiff_kappaphi"/>
+    </sample>
+    <more>
+      <device hwrid="/distccd"/>
+<!--
+      <device hwrid="/exp/shuty"/>
+      <device hwrid="/exp/shutz"/>
+-->      
+    </more>
+  </motors>
+
+
+  <object role="beam_info" href="beam_info" />
+  <object role="centring" href="/centring-math" />
+
+  <samplechanger>/sc-mockup</samplechanger>
+  <wagolight>/udiff_light</wagolight>
+  <channel version="falc141:spec" type="spec" name="auto_centring_flag">AUTO_CENTRING_FLAG</channel>
+  <channel version="falc141:spec" type="spec" name="auto_loop_centring_enabled">ENABLE_AUTO_LOOP_CENTRING</channel>
+  <channel version="falc141:spec" type="spec" name="auto_crystal_centring_enabled">ENABLE_AUTO_CRYSTAL_CENTRING</channel>
+  <channel version="falc141:spec" type="spec" name="playback_centring_enabled">ENABLE_PLAYBACK_CENTRING</channel>
+  <command version="falc141:spec" type="spec" name="getBeamSizeX">getMxBeamSizeX</command>
+  <command version="falc141:spec" type="spec" name="getBeamSizeY">getMxBeamSizeY</command>
+  <command version="falc141:spec" type="spec" name="getBeamShape">getMxBeamShape</command>
+  <!-- 2011-08-26-mh: add new spec command which is used from the HutchMenuBrick -->
+  <!--                to-do: find out where this command is found in ESRF sources -->
+  <command version="falc141:spec" type="spec" name="getBeamInfo">getMxBeamInfo</command>
+  <!-- 2011-08-26-mh: end -->
+  <channel type="tango" name="beam_pos_x" tangoname="bl141/microdiff/general" polling="events">BeamPositionHorizontal</channel>
+  <channel type="tango" name="beam_pos_y" tangoname="bl141/microdiff/general" polling="events">BeamPositionVertical</channel>
+  <channel type="tango" name="x_calib_attr" tangoname="bl141/microdiff/general" polling="events">CoaxCamScaleX</channel>
+  <channel type="tango" name="y_calib_attr" tangoname="bl141/microdiff/general" polling="events">CoaxCamScaleY</channel>
+  <channel type="tango" name="state" tangoname="bl141/microdiff/general">State</channel>
+  <channel type="tango" name="phase_position" tangoname="bl141/microdiff/general">PhasePosition</channel>
+  <command type="tango" name="sync_move_cmd" tangoname="bl141/microdiff/general">SyncMoveMotors</command>
+  <command type="tango" name="save_centring_position" tangoname="bl141/microdiff/general">saveCentringPositions</command>
+  <channel type="tango" name="beam_is_located" tangoname="bl141/microdiff/general" polling="events">BeamIsLocated</channel>
+  <command type="tango" name="centring_click_cmd" tangoname="bl141/microdiff/general">SetCentringClick</command>
+  <command type="tango" name="start_centring_phase_cmd" tangoname="bl141/microdiff/general">StartManualSampleCentring</command>
+</equipment>

@@ -1,0 +1,4 @@
+<device class = "ShutterEpics">
+  <username>Safety Shutter</username>
+  <channel type="epics" name="safshut_status" polling="1000">BS02R01U114L:State</channel>
+</device>

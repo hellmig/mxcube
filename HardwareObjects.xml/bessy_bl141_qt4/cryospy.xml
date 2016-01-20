@@ -1,0 +1,4 @@
+<device class = "CryoEpics">
+  <username>Cryostream</username>
+  <channel type="epics" name="cryo_temp" polling="1000">CRYO141:GET_TEMP</channel>
+</device>
