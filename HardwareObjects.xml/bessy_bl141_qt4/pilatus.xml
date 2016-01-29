@@ -5,6 +5,8 @@
    <model>Pilatus2_6M</model>
    <file_suffix>cbf</file_suffix>
 
+   <create_remote_path_ssh>False</create_remote_path_ssh>
+
    <lima_device>bl141/lima/camera</lima_device>
    <pilatus_device>bl141/lima/p6m</pilatus_device>
    <!-- control>exp141b</control -->

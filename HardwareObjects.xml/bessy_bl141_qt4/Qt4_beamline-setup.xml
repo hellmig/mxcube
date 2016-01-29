@@ -21,10 +21,8 @@
   <!-- collection methods -->
   <object href="/Qt4_mxcollect" role="collect"/>
   <object href="/lims-client-mockup" role="lims_client"/>
-  <!--
   <object href="/energyscan_abstract" role="energyscan"/>
   <object href="/xrf-scan-mockup" role="xrf"/>
-  -->
   <object href="/data-analysis" role="data_analysis"/>
 
   <object href="/parallel-processing" role="parallel_processing"/>
