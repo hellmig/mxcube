@@ -43,10 +43,10 @@ class HutchMenuBrick(BlissWidget):
         self.sampleChanger=None
         self.collectObj = None
         self.queue_hwobj = None
-	self.beam_position = [0, 0]
-        self.beam_size = [0, 0]
-	self.beam_shape = "Rectangular"
-	self.pixels_per_mm = [0, 0]
+	self.beam_position = None
+        self.beam_size = None
+	self.beam_shape = None
+	self.pixels_per_mm = None
         #self.allowMoveToBeamCentring = False
 
         # Define properties
@@ -626,14 +626,13 @@ class HutchMenuBrick(BlissWidget):
     def miniDiffReady(self):
         try:
 	    self.pixels_per_mm = self.minidiff.get_pixels_per_mm()
-	    self.beam_position = self.beamInfo.get_beam_position()	
-	    beam_info = self.beamInfo.get_beam_info()	
-	    self.beam_size = (beam_info["size_x"], beam_info["size_y"])
-
         except:
             self.pixels_per_mm = [None, None] 
+        
         if self.pixels_per_mm[0] is not None\
 	and self.pixels_per_mm[1] is not None:
+	    self.beam_position = self.beamInfo.get_beam_position()	
+            self.beam_size = self.beamInfo.get_beam_size()
             self.sampleCentreBox.setEnabled(True)
             self.updateBeam()
             self.emit(PYSIGNAL("beamPositionChanged"), (self.beam_position[0],\
@@ -724,7 +723,11 @@ class HutchMenuBrick(BlissWidget):
             logging.getLogger().exception("HutchMenuBrick: problem starting up display")
 
     def _drawBeam(self):
-        try:
+        if None in (self.beam_size, self.beam_shape):
+	    self.beam_position = self.beamInfo.get_beam_position()	
+            self.beam_size = self.beamInfo.get_beam_size()
+         
+        if True:
           self.__rectangularBeam.show()
           if None in self.beam_size:
             return
@@ -737,12 +740,11 @@ class HutchMenuBrick(BlissWidget):
             self.__beam.setSize(self.beam_size[0] * self.pixels_per_mm[0],\
 				self.beam_size[1] * self.pixels_per_mm[1])
             self.__beam.show()
-        except:
-          pass
 
     def updateBeam(self,force=False):
         if self["displayBeam"]:
-              #if not self.minidiff.isReady(): time.sleep(0.2)
+              #if self.minidiff:
+              #  if not self.minidiff.isReady(): time.sleep(0.2)
               try:
                  self.__rectangularBeam.set_xMid_yMid(self.beam_position[0],
 						      self.beam_position[1])
@@ -770,6 +772,10 @@ class HutchMenuBrick(BlissWidget):
         self.minidiff.phiMotorStateChanged( self.minidiff.phiMotor.getState())
 
     def beamInfoChanged(self, beam_info):
+        try:
+          self.beam_position = self.beamInfo.get_beam_position()
+        except:
+          pass
         self.beam_size = (beam_info["size_x"], beam_info["size_y"])
         self.beam_shape = beam_info["shape"]
         self.emit(PYSIGNAL("beamPositionChanged"), (self.beam_position[0],\

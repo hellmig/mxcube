@@ -32,7 +32,7 @@ from BlissFramework.Utils import Qt4_widget_colors
 from BlissFramework.Qt4_BaseComponents import BlissWidget
 
 
-__category__ = 'Qt4_General'
+__category__ = 'General'
 
 
 class Qt4_HutchMenuBrick(BlissWidget):
@@ -49,7 +49,6 @@ class Qt4_HutchMenuBrick(BlissWidget):
         # Hardware objects ----------------------------------------------------
         self.beam_info_hwobj = None
         self.graphics_manager_hwobj = None
-        self.collect_hwobj = None
         self.queue_hwobj = None
 
         # Internal values -----------------------------------------------------
@@ -63,7 +62,7 @@ class Qt4_HutchMenuBrick(BlissWidget):
         self.addProperty('collection', 'string', '')
         self.addProperty('graphicsManager', 'string', '')
         self.addProperty('enableAutoFocus', 'boolean', True)
-        self.addProperty('enableRefreshCamera', 'boolean', True)
+        self.addProperty('enableRefreshCamera', 'boolean', False)
         self.addProperty('enableVisualAlign', 'boolean', True)
         self.addProperty('enableAutoCenter', 'boolean', True)
 
@@ -86,7 +85,7 @@ class Qt4_HutchMenuBrick(BlissWidget):
         self.refresh_camera_button = MonoStateButton(self, "Refresh", "Refresh")
         self.visual_align_button = MonoStateButton(self, "Align", "Align")
         self.select_all_button = MonoStateButton(self, "Select all", "Check")
-        self.clear_all_button = MonoStateButton(self, "Clear", "Delete")
+        self.clear_all_button = MonoStateButton(self, "Clear all", "Delete")
         self.auto_center_button = MonoStateButton(self, "Auto", "VCRPlay2")
 
         # Layout -------------------------------------------------------------- 
@@ -152,8 +151,6 @@ class Qt4_HutchMenuBrick(BlissWidget):
                 self.connect(self.graphics_manager_hwobj, QtCore.SIGNAL('centringFailed'), self.centring_failed)
                 self.connect(self.graphics_manager_hwobj, QtCore.SIGNAL('centringSuccessful'), self.centring_successful)
                 self.connect(self.graphics_manager_hwobj, QtCore.SIGNAL('minidiffReady'), self.diffractometer_ready_changed)
-        elif property_name == "collection":
-            self.collect_hwobj = self.getHardwareObject(new_value)
         elif property_name == "enableAutoFocus":
             self.auto_focus_button.setVisible(new_value) 
         elif property_name == "enableRefreshCamera":
@@ -196,7 +193,7 @@ class Qt4_HutchMenuBrick(BlissWidget):
             filename = str(filename)
             image_type = os.path.splitext(filename)[1].strip('.').upper()
             try:
-                self.graphics_manager_hwobj.save_snapshot(filename)
+                self.graphics_manager_hwobj.save_scene_snapshot(filename)
                 self.file_index += 1        
             except:
                 logging.getLogger().exception("HutchMenuBrick: error saving snapshot!")
@@ -303,8 +300,6 @@ class Qt4_HutchMenuBrick(BlissWidget):
             Qt4_widget_colors.set_widget_color(self.reject_button, 
                                                Qt4_widget_colors.LIGHT_RED)
 
-        if self.collect_hwobj is not None:
-            self.collect_hwobj.setCentringStatus(centring_status)
         self.setEnabled(True)
         self.emit(QtCore.SIGNAL("enableMinidiff"), (True,))
 
@@ -322,8 +317,6 @@ class Qt4_HutchMenuBrick(BlissWidget):
             Qt4_widget_colors.set_widget_color(self.reject_button, QtCore.Qt.red)
         else:
             self.reject_button.setEnabled(False)
-        if self.collect_hwobj is not None:
-            self.collect_hwobj.setCentringStatus(centring_status)
         #self.emit(QtCore.SIGNAL("enableMinidiff"), (True,))
 
     def create_line_clicked(self):

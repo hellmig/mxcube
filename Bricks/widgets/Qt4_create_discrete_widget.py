@@ -23,9 +23,9 @@ from PyQt4 import QtCore
 from PyQt4 import QtGui
 
 import Qt4_queue_item
-import Qt4_GraphicsManager
 import queue_model_objects_v1 as queue_model_objects
 import queue_model_enumerables_v1 as queue_model_enumerables
+from Qt4_GraphicsLib import GraphicsItemPoint
 
 from BlissFramework.Utils import Qt4_widget_colors
 from Qt4_data_path_widget import DataPathWidget
@@ -72,9 +72,9 @@ class CreateDiscreteWidget(CreateTaskBase):
         _main_vlayout.addWidget(self._acq_widget)
         _main_vlayout.addWidget(self._data_path_widget)
         _main_vlayout.addWidget(self._processing_widget)
-        _main_vlayout.setContentsMargins(0,0,0,0)
+        _main_vlayout.addStretch(0)
         _main_vlayout.setSpacing(2)
-        _main_vlayout.addStretch(10)
+        _main_vlayout.setContentsMargins(0,0,0,0)
 
         # SizePolicies --------------------------------------------------------
         
@@ -183,13 +183,13 @@ class CreateDiscreteWidget(CreateTaskBase):
         """
         tasks = []
 
-        if isinstance(shape, Qt4_GraphicsManager.GraphicsItemPoint):
-            snapshot = self._graphics_manager_hwobj.get_snapshot(shape)
+        if isinstance(shape, GraphicsItemPoint):
+            snapshot = self._graphics_manager_hwobj.get_scene_snapshot(shape)
             cpos = copy.deepcopy(shape.get_centred_position())
             cpos.snapshot_image = snapshot
         else:
             cpos = queue_model_objects.CentredPosition()
-            cpos.snapshot_image = self._graphics_manager_hwobj.get_snapshot() 
+            cpos.snapshot_image = self._graphics_manager_hwobj.get_scene_snapshot() 
 
         if self._acq_widget.use_inverse_beam():
             total_num_images = self._acquisition_parameters.num_images
