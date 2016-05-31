@@ -622,7 +622,7 @@ class Qt4_ProposalBrick2(BlissWidget):
             self.local_login_hwobj = self.getHardwareObject(new_value)
         elif property_name == 'dbConnection':
             self.lims_hwobj = self.getHardwareObject(new_value)
-            self.login_as_user = self.lims_hwobj.get_login_type() == "user"
+            self.login_as_user = (self.lims_hwobj is None) or (self.lims_hwobj.get_login_type() == "user")
             if self.login_as_user:
                self.login_as_user_widget.show()
                self.login_as_proposal_widget.hide()
