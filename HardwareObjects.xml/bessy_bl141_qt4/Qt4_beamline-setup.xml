@@ -22,8 +22,10 @@
   <object href="/Qt4_mxcollect" role="collect"/>
   <object href="/lims-client-mockup" role="lims_client"/>
   <object href="/energyscan_abstract" role="energyscan"/>
-  <object href="/xrfspectrum" role="xrf"/>
+  <object href="/xrfspectrum" role="xrf_spectrum"/>
   <object href="/data-analysis" role="data_analysis"/>
+
+  <object href="/image-tracking" role="image_tracking"/>
 
   <object href="/parallel-processing" role="parallel_processing"/>
 

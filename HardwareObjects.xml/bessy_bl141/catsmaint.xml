@@ -25,5 +25,6 @@
 
   <channel type="tango" name="_chnPathRunning" polling="events">PathRunning</channel>
   <channel type="tango" name="_chnMessage" polling="events">Message</channel>
+  <channel type="tango" name="_chnToolOpenClose" polling="events">di_ToolOpen</channel>
 </equipment>
 

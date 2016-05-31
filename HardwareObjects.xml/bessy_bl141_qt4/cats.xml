@@ -5,6 +5,7 @@
   <no_of_lids>3</no_of_lids>
  
   <channel type="tango" name="_chnState" polling="events">State</channel>
+  <channel type="tango" name="_chnPowered" polling="events">Powered</channel>
   
   <command type="tango" name="_cmdAbort">abort</command>
 

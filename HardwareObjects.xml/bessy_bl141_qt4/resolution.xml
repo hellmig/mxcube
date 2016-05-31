@@ -3,7 +3,7 @@
   <device hwrid="/distccd" role="dtox"/>
   <device hwrid="/monoang" role="wavelength"/ -->
 
-  <object href="/distccd" role="detm"/>
+  <!-- <object href="/distccd" role="detm"/> -->
   <object href="/distccd" role="dtox"/>
   <!-- <object href="/monoang" role="wavelength"/> -->
   <object href="/pilatus" role="detector"/>

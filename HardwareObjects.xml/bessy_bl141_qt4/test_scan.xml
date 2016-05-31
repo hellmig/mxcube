@@ -1,0 +1,24 @@
+<procedure>
+  <specversion>esc142:spec</specversion>
+  <command>
+    <type>spec</type>
+    <name>Gonio scan</name>
+    <argument>
+      <name>Start angle</name>
+      <type>float</type>
+    </argument>
+    <argument>
+      <name>Rotation range</name>
+      <type>float</type>
+    </argument>
+    <argument>
+      <name>Exposure time</name>
+      <type>float</type>
+    </argument>
+    <argument>
+      <name>Shutter flag</name>
+      <type>integer</type>
+    </argument>
+    <toexecute>nanodiff_osc_scan</toexecute>
+  </command>
+</procedure>

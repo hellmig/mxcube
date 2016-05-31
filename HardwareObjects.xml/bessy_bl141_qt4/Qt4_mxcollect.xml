@@ -12,6 +12,7 @@
   <object href="/flux" role="flux"/> 
   <object href="/cryospy" role="cryo_stream"/>
   <object href="/distccd" role="detector_distance"/>
+  <object href="/pilatus" role="detector"/>
 
   <auto_processing>
       <program>

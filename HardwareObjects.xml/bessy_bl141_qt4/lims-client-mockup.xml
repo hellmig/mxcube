@@ -1,3 +1,4 @@
 <object class="ISPyBClient2Mockup">
+  <object href="/session" role="session"/>
   <beamline_name>ID:TEST</beamline_name>
 </object>

@@ -1,11 +1,13 @@
-<equipment class="BESSYXrfSpectrum">
+<equipment class="BESSY141XRFSpectrum">
+  <configFile>/141dat/pxrdat/scans/pymca_config/pymca_bl141.cfg</configFile>
+  <object href="/escfilters" role="transmission"/>
+  <object href="/energy" role="energy"/>
+  <object href="/beam_info" role="beam_info"/>
   <specversion>bl141:spec</specversion>
-  <command type="spec" name="doSpectrum">eprodc_xfespectrum</command>
-  <channel type="spec" name="spectrumStatusMsg">eprodc_energy_scan_msg</channel>
-  <channel type="spec" name="spectrum_args">MXCOLLECT_PARS</channel>
-  <channel type="spec" name="config_data">XFE_CONFIG</channel>
-  <channel type="spec" name="mca_data" dispatchMode="None">XFE_DATA</channel>
-  <channel type="spec" name="calib_data" dispatchMode="None">XFE_CALIB</channel>
+  <command type="spec" name="cmdSpectrumStart">eprodc_xfespectrum</command>
+  <channel type="spec" name="chanSpectrumStatus">eprodc_energy_scan_msg</channel>
+  <channel type="spec" name="chanSpectrumConsts">XFE_CALIB</channel>
+  <channel type="spec" name="chan_mca_data" dispatchMode="None">XFE_COUNTS</channel>
 <!--
   <device hwrid="/dbconnection" role="dbserver"/>
 -->

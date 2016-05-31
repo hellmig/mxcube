@@ -5,6 +5,7 @@
   <command type="tango" name="_cmdReset">reset</command>
   <command type="tango" name="_cmdBack">back</command>
   <command type="tango" name="_cmdSafe">safe</command>
+
   <command type="tango" name="_cmdPowerOn">powerOn</command>
   <command type="tango" name="_cmdPowerOff">powerOff</command>
   <channel type="tango" name="_chnPowered" polling="events">Powered</channel>
@@ -24,5 +25,6 @@
 
   <channel type="tango" name="_chnPathRunning" polling="events">PathRunning</channel>
   <channel type="tango" name="_chnMessage" polling="events">Message</channel>
+  <channel type="tango" name="_chnToolOpenClose" polling="events">di_ToolOpen</channel>
 </equipment>
 
