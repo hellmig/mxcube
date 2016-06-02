@@ -45,7 +45,7 @@ class Qt4_MotorPredefPosBrick(BlissWidget):
         self.motor_hwobj = None
 
         # Internal values -----------------------------------------------------
-
+        self.invalid_position = None
         self.positions = None
         # Properties ----------------------------------------------------------
         self.addProperty('label','string','')
@@ -151,37 +151,63 @@ class Qt4_MotorPredefPosBrick(BlissWidget):
 
     def fillPositions(self, positions = None): 
         self.positions_combo.clear()
-        if self.motor_hwobj is not None:
-            if positions is None:
-                positions = self.motor_hwobj.getPredefinedPositionsList()
 
-        if positions is None:
-            positions=[]
+        self.positions = positions
+        if self.positions is None:
+            if self.motor_hwobj is not None:
+                self.positions = self.motor_hwobj.getPredefinedPositionsList()
+            else:
+                self.positions = []
 
-        for p in positions:
-            pos_list=p.split()
-            pos_name=pos_list[1]
+        for p in self.positions:
+            pos_list = p.split()
+            pos_name = pos_list[1]
             self.positions_combo.addItem(str(pos_name))
-
-        self.positions=positions
 
         if self.motor_hwobj is not None:
             if self.motor_hwobj.isReady():
                 self.predefinedPositionChanged(self.motor_hwobj.getCurrentPositionName(), 0)
 
+        self.invalid_position = False
+        return
+
     def lstPositionsClicked(self, index):
-        index += 1
-        if index > 0:
+        if self.invalid_position: 
+            if index > 0:
+                if self.motor_hwobj.isReady():
+                    self.motor_hwobj.moveToPosition(self.positions[index-1])
+                else:
+                    # stay at the invalid postion index if motor not ready
+                    self.positions_combo.setCurrentIndex(0)
+        else:
+            # only "real" motor-position entries are in the combo box
             if self.motor_hwobj.isReady():
-                self.motor_hwobj.moveToPosition(self.positions[index-1])
+                self.motor_hwobj.moveToPosition(self.positions[index])
             else:
-                self.positions_combo.setCurrentIndex(0)
+                # transition to invalid if motor not ready
+                self.predefinedPositionChanged('', None)
+           
 
     def predefinedPositionChanged(self, positionName, offset):
-        self.positions_combo.setCurrentIndex(0)
+        if self.positions and (len(self.positions) > 0):
+            # only do something if valid positions have already been read from the hardware object
 
-        if self.positions:
-           for i in range(len(self.positions)):
-               if self.positions[i] == positionName:
-                   self.positions_combo.setCurrentIndex(i+1)
-                   break
+            if  positionName in self.positions:
+                # the current motor position is a valid position
+                # in the following find out which one
+                if self.invalid_position:
+                    # remove the first item 
+                    self.positions_combo.removeItem(0)
+                    self.invalid_position = False
+       
+                for i in range(len(self.positions)):
+                    # print i, self.positions[i]
+                    if self.positions[i] == positionName:
+                         self.positions_combo.setCurrentIndex(i)
+                         break
+            else:
+                # motor located at undefined (or intermediate) position
+                if not self.invalid_position:
+                    self.positions_combo.insertItem(-1, '???')
+                    self.positions_combo.setCurrentIndex(0)
+                    self.invalid_position = True
