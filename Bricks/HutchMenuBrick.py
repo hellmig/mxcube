@@ -226,8 +226,9 @@ class HutchMenuBrick(BlissWidget):
             self.extraCommands['icons']=newValue
         elif propertyName=='queue':
             self.queue_hwobj = self.getHardwareObject(newValue)
-            self.queue_hwobj.connect("queue_execution_finished", self.enable)
-            self.queue_hwobj.connect("queue_stopped", self.enable)
+            if self.queue_hwobj:
+                self.queue_hwobj.connect("queue_execution_finished", self.enable)
+                self.queue_hwobj.connect("queue_stopped", self.enable)
 	elif propertyName=='useMDPhases':
 	    if newValue:
 	        self.buttonToogleMDPhase.show()
@@ -419,7 +420,7 @@ class HutchMenuBrick(BlissWidget):
 	    self.emit(PYSIGNAL("newCentredPos"), (state, centring_status, beam_info))
         
 
-        if self.queue_hwobj.is_executing():
+        if self.queue_hwobj and self.queue_hwobj.is_executing():
             self.disable()
 
     def centringSnapshots(self,state):
