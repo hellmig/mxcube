@@ -1,0 +1,7 @@
+<object class="Qt4_GraphicsManager">
+   <object href="/nanodiff" role="diffractometer"/>
+   <object href="/beam_info" role="beam_info"/>
+   <object href="/prosilica" role="camera"/>
+   <imageScaleList>[1, 2]</imageScaleList>
+   <defaultImageScale>1</defaultImageScale>
+</object>

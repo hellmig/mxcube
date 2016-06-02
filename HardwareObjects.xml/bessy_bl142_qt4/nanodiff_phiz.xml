@@ -1,0 +1,6 @@
+<device class = "SpecMotor">
+  <username>Gonio Z</username>
+  <specname>phiz</specname>
+  <specversion>esc142:spec</specversion>
+  <GUIstep>1.0</GUIstep>
+</device>

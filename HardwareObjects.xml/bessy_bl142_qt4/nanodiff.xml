@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<equipment class="Nanodiff">
+  <username>Nanodiff</username>
+  <device role="camera" hwrid="/prosilica"></device>
+  <motors>
+    <phi>
+      <device role="phi" hwrid="/nanodiff_omega"></device>
+      <device role="phiz" hwrid="/nanodiff_phiz"></device>
+    </phi>
+    <sample>
+      <device role="zoom" hwrid="/nanodiff_zoom"/>
+      <device role="focus" hwrid="/nanodiff_phix"/>
+      <device role="phiy" hwrid="/nanodiff_phiy"/>
+      <device role="sampx" hwrid="/nanodiff_sampx"/>
+      <device role="sampy" hwrid="/nanodiff_sampy"/>
+    </sample>
+  </motors>
+
+  <object role="beam_info" href="beam_info" />
+</equipment>

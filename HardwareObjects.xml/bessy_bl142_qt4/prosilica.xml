@@ -1,0 +1,6 @@
+<device class="Qt4_LimaVideo">
+  <username>Prosilica GC655C</username>
+  <type>Prosilica</type>
+  <address>169.254.1.2</address>
+  <interval>100</interval>
+</device>

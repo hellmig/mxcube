@@ -1,0 +1,6 @@
+<device class = "SpecMotor">
+  <username>Sample X</username>
+  <specname>sampx</specname>
+  <specversion>esc142:spec</specversion>
+  <GUIstep>1.0</GUIstep>
+</device>

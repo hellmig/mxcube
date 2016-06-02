@@ -1,0 +1,6 @@
+<device class = "SpecMotor">
+  <username>Omega</username>
+  <specname>omega</specname>
+  <specversion>esc142:spec</specversion>
+  <GUIstep>90.0</GUIstep>
+</device>

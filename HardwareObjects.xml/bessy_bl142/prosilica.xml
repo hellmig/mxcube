@@ -1,0 +1,21 @@
+<device class="LimaVideo">
+  <username>Prosilica GC655C</username>
+  <type>Prosilica</type>
+  <address>169.254.1.2</address>
+  <mirror>(False, False)</mirror>
+  <!-- <tangoname>bl142/lima/camera</tangoname> -->
+  <!--<imagetype>bayer:rg</imagetype>-->
+  <!--<imagetype>jpeg</imagetype>-->
+  <imageType>rgb</imageType>
+  <interval>100</interval>
+
+  <!-- <imagetype>mmap:/tmp/prosilicaBuffer</imagetype> -->
+  <!-- <interval>66</interval> -->
+  <!-- Source points to a directory with jpg images -->
+  <!-- <remote_interval>40</remote_interval> -->
+  <!-- <bpmname>id23/ge1350c-bpm/1</bpmname> -->
+</device>
+
+<!--
+Screen size is 680x512
+-->

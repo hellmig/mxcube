@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<equipment class="DiffractometerMockup">
+  <username>Diffractometer</username>
+  <motors>
+    <phi>
+      <device role="phi" hwrid="/omega-mockup"></device>
+      <device role="phiz" hwrid="/phiz-mockup"></device>
+    </phi>
+    <sample>
+      <device role="zoom" hwrid="/zoom-mockup"/>
+      <device role="lightLevel" hwrid="/lightmot-mockup"/>
+      <device role="light" hwrid="/lightmot-mockup"/>
+      <device role="focus" hwrid="/phix-mockup"/>
+      <device role="phiy" hwrid="/phiy-mockup"/>
+      <device role="sampx" hwrid="/sampx-mockup"/>
+      <device role="sampy" hwrid="/sampy-mockup"/>
+      <device role="kappa" hwrid="/kappa-mockup"/>
+      <device role="kappa_phi" hwrid="/kappaphi-mockup"/>
+    </sample>
+  </motors>
+</equipment>

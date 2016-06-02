@@ -1,0 +1,7 @@
+<object class="BESSY142BeamInfo">
+    <device role="camera" hwrid="/prosilica"/>
+    <beam_size_slits>0.2 0.2</beam_size_slits>
+    <beam_divergence_vertical>6.5</beam_divergence_vertical>
+    <beam_divergence_horizontal>104</beam_divergence_horizontal>
+</object>
+
