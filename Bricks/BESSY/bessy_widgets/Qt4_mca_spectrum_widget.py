@@ -54,9 +54,12 @@ from PyMca import ConfigDict
 
 from BlissFramework.Qt4_BaseComponents import BlissWidget
 
+
 class McaSpectrumWidget(BlissWidget):
     def __init__(self, *args):
         BlissWidget.__init__(self, *args)
+
+        print "** McaSpectrumWidget (BESSY)"
 
         self.defineSlot('set_data',())
 

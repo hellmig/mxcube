@@ -20,7 +20,7 @@
 from PyQt4 import QtGui
 
 from BlissFramework.Qt4_BaseComponents import BlissWidget
-from widgets.Qt4_xrf_spectrum_parameters_widget import XRFSpectrumParametersWidget
+from bessy_widgets.Qt4_xrf_spectrum_parameters_widget import XRFSpectrumParametersWidget
 
 
 __category__ = 'Task'
@@ -32,6 +32,8 @@ class Qt4_XRFSpectrumParametersBrick(BlissWidget):
     """
     def __init__(self, *args):
         BlissWidget.__init__(self, *args)
+
+        print "***", __name__, __file__
 
         self.addProperty('xrf-spectrum', 'string', '')        
         self.addProperty("session", "string", "/session")

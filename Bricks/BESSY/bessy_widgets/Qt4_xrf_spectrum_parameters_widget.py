@@ -27,12 +27,14 @@ import queue_model_objects_v1 as queue_model_objects
 
 from BlissFramework.Utils import Qt4_widget_colors
 from widgets.Qt4_data_path_widget import DataPathWidget
-from widgets.Qt4_mca_spectrum_widget import McaSpectrumWidget
+from bessy_widgets.Qt4_mca_spectrum_widget import McaSpectrumWidget
 
 
 class XRFSpectrumParametersWidget(QtGui.QWidget):
     def __init__(self, parent = None, name = "xrf_spectrum_parameters_widget"):
         QtGui.QWidget.__init__(self, parent)
+ 
+        print "** XRFSpectrumparametersWidget (BESSY)", __name__, __file__
 
         if name is not None:
             self.setObjectName(name)

@@ -133,7 +133,13 @@ class Qt4_HutchMenuBrick(BlissWidget):
         #self.instanceSynchronize("")
 
         self.accept_button.setEnabled(False)
-  
+        # 2016-06-08-bessy-mh: disable non-functional buttons for now
+        self.create_line_button.setEnabled(False)
+        self.draw_grid_button.setEnabled(False)
+        self.auto_focus_button.setEnabled(False)
+        self.visual_align_button.setEnabled(False)
+        self.select_all_button.setEnabled(False)
+
     def propertyChanged(self, property_name, old_value, new_value):
         """
         Descript. : Event triggered when user property changed in the property
