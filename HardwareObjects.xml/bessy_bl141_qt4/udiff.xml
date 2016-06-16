@@ -49,7 +49,7 @@
   <channel type="tango" name="beam_pos_y" tangoname="bl141/microdiff/general" polling="events">BeamPositionVertical</channel>
   <channel type="tango" name="x_calib_attr" tangoname="bl141/microdiff/general" polling="events">CoaxCamScaleX</channel>
   <channel type="tango" name="y_calib_attr" tangoname="bl141/microdiff/general" polling="events">CoaxCamScaleY</channel>
-  <channel type="tango" name="state" tangoname="bl141/microdiff/general">State</channel>
+  <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">State</channel>
   <channel type="tango" name="phase_position" tangoname="bl141/microdiff/general">PhasePosition</channel>
   <command type="tango" name="sync_move_cmd" tangoname="bl141/microdiff/general">SyncMoveMotors</command>
   <command type="tango" name="save_centring_position" tangoname="bl141/microdiff/general">saveCentringPositions</command>

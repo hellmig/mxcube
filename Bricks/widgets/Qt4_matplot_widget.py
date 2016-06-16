@@ -21,14 +21,20 @@ from PyQt4 import QtGui
 from PyQt4 import QtCore
 
 import numpy as np
-
-import matplotlib.pyplot as plt
-from matplotlib.backends import qt4_compat
 from matplotlib.figure import Figure
+
+#from matplotlib.backends import qt4_compat
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt4agg \
-import NavigationToolbar2QTAgg as NavigationToolbar
+
+try:
+   from matplotlib.backends.backend_qt4agg \
+   import NavigationToolbar2QTAgg as NavigationToolbar
+except:
+   from matplotlib.backends.backend_qt4agg \
+   import NavigationToolbar2QT as NavigationToolbar
+
+import matplotlib.pyplot as plt
 
 
 from BlissFramework.Utils import Qt4_widget_colors
@@ -151,7 +157,7 @@ class MplCanvas(FigureCanvas):
         self._axis_x_array = np.append(self._axis_x_array, x)
         self._axis_y_array = np.append(self._axis_y_array, y)
         self.axes.plot(self._axis_x_array, self._axis_y_array, linewidth=2)
-        self.set_title("Scan in progres. Please wait...")
+        self.set_title("Scan in progress. Please wait...")
 
     def set_axes_labels(self, x_label, y_label):
         self.axes.set_xlabel(x_label)
@@ -243,7 +249,8 @@ class TwoDimenisonalPlotWidget(QtGui.QWidget):
     """
     Descript. :
     """
-    mouseClickedSignal = QtCore.pyqtSignal(int, int)
+    mouseClickedSignal = QtCore.pyqtSignal(float, float)
+    mouseDoubleClickedSignal = QtCore.pyqtSignal(float, float)
 
     def __init__(self, parent=None):
         """
@@ -270,11 +277,20 @@ class TwoDimenisonalPlotWidget(QtGui.QWidget):
         self.setFixedSize(1000, 700)
 
     def mouse_clicked(self, mouse_event):
-        self.mouseClickedSignal.emit(mouse_event.xdata,
-                                     mouse_event.ydata)
+        dbl_click = False
+        if hasattr(mouse_event, "dblclick"):
+            dbl_click = mouse_event.dblclick
+        if dbl_click:
+            self.mouseDoubleClickedSignal.emit(mouse_event.xdata,
+                                               mouse_event.ydata)
+        else:
+            self.mouseClickedSignal.emit(mouse_event.xdata,
+                                         mouse_event.ydata)
 
     def plot_result(self, result, last_result=None):
-        im = self.mpl_canvas.axes.imshow(result, interpolation = 'none')
+        im = self.mpl_canvas.axes.imshow(result, 
+                    interpolation='none',  aspect='auto',
+                    extent=[0, result.shape[1], 0, result.shape[0]])
         im.set_cmap('hot')
         if result.max() > 0:
             self.add_divider()
@@ -284,7 +300,6 @@ class TwoDimenisonalPlotWidget(QtGui.QWidget):
 
             mgr = plt.get_current_fig_manager()
             #mgr.full_screen_toggle()
-            print mgr
             mgr.window.move(10, 10)
 
     def get_current_coord(self):
@@ -301,3 +316,6 @@ class TwoDimenisonalPlotWidget(QtGui.QWidget):
         self.cax = self.divider.append_axes("right", size=0.3, pad=0.05)
         self.cax.tick_params(axis='x', labelsize=8)
         self.cax.tick_params(axis='y', labelsize=8)
+
+    def clear(self): 
+        self.mpl_canvas.axes.cla()

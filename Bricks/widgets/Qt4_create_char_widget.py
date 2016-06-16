@@ -25,9 +25,9 @@ from PyQt4 import QtGui
 from PyQt4 import uic
 
 import Qt4_queue_item
-import Qt4_GraphicsManager
 import queue_model_objects_v1 as queue_model_objects
 import queue_model_enumerables_v1 as queue_model_enumerables
+from Qt4_GraphicsLib import GraphicsItemPoint
 
 from widgets.Qt4_widget_utils import DataModelInputBinder
 from Qt4_create_task_base import CreateTaskBase
@@ -78,7 +78,7 @@ class CreateCharWidget(CreateTaskBase):
         _main_vlayout.addWidget(self._vertical_dimension_widget)
         _main_vlayout.setContentsMargins(0, 0, 0, 0)
         _main_vlayout.setSpacing(2)
-        _main_vlayout.addStretch(0)
+        _main_vlayout.addStretch(10)
 
         # SizePolicies --------------------------------------------------------
 
@@ -284,7 +284,7 @@ class CreateCharWidget(CreateTaskBase):
         selected_shapes = self._graphics_manager_hwobj.get_selected_shapes()
 
         for shape in selected_shapes:
-            if isinstance(shape, Qt4_GraphicsManager.GraphicsItemPoint):
+            if isinstance(shape, GraphicsItemPoint):
                 result = True
         return result
         
@@ -296,14 +296,14 @@ class CreateCharWidget(CreateTaskBase):
         """
         tasks = []
 
-        if not shape or not isinstance(shape, Qt4_GraphicsManager.GraphicsItemPoint):
+        if not shape or not isinstance(shape, GraphicsItemPoint):
             cpos = queue_model_objects.CentredPosition()
-            cpos.snapshot_image = self._graphics_manager_hwobj.get_snapshot()
+            cpos.snapshot_image = self._graphics_manager_hwobj.get_scene_snapshot()
         else:
             # Shapes selected and sample is mounted, get the
             # centred positions for the shapes
             snapshot = self._graphics_manager_hwobj.\
-                        get_snapshot(shape)
+                        get_scene_snapshot(shape)
             cpos = copy.deepcopy(shape.get_centred_position())
             cpos.snapshot_image = snapshot 
 

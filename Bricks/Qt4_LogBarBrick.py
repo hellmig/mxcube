@@ -43,29 +43,17 @@ class Qt4_LogBarBrick(BlissWidget):
         """
         BlissWidget.__init__(self, *args)
 
-        self.addProperty('fixedHeight', 'integer', '-1')
-
         self._status_bar_widget = LogBarWidget(self)
         _main_hlayout = QtGui.QHBoxLayout(self)
         _main_hlayout.addWidget(self._status_bar_widget)
         _main_hlayout.setSpacing(0)
-        _main_hlayout.setContentsMargins(0, 0, 0, 0)
+        _main_hlayout.setContentsMargins(2, 2, 2, 2)
         self.setLayout(_main_hlayout)
 
         self.setSizePolicy(QtGui.QSizePolicy.MinimumExpanding, 
                            QtGui.QSizePolicy.Fixed)
 
         Qt4_GUILogHandler.GUILogHandler().register(self)
-
-    def propertyChanged(self, property_name, old_value, new_value):
-        """
-        Descript. :
-        Args.     :
-        Return.   : 
-        """
-        if property_name == 'fixedHeight':
-            if new_value > -1:
-                self._status_bar_widget.set_fixed_height(new_value)
 
     def customEvent(self, event):
         """

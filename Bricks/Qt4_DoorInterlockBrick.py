@@ -57,11 +57,11 @@ class Qt4_DoorInterlockBrick(BlissWidget):
         
         # Graphic elements ----------------------------------------------------
         self.main_groupbox = QtGui.QGroupBox("Door interlock", self)
-        self.main_groupbox.setAlignment(QtGui.QLabel.AlignCenter)
+        self.main_groupbox.setAlignment(QtCore.Qt.AlignCenter)
         self.state_label = QtGui.QLabel('<b>unknown</b>', self.main_groupbox)
         Qt4_widget_colors.set_widget_color(self.state_label,
                                            self.STATES['unknown']) 
-        self.state_label.setAlignment(QtGui.QLabel.AlignCenter)
+        self.state_label.setAlignment(QtCore.Qt.AlignCenter)
         self.unlock_door_button = QtGui.QPushButton(\
              Qt4_Icons.load_icon("EnterHutch"),
              "Unlock", self.main_groupbox)
@@ -86,6 +86,7 @@ class Qt4_DoorInterlockBrick(BlissWidget):
         # Other ---------------------------------------------------------------
         self.state_label.setToolTip("Shows the current door state")
         self.unlock_door_button.setToolTip("Unlocks the doors")
+        self.setEnabled(False)
 
     def unlock_doors(self):
         self.door_interlock_hwobj.unlock_door_interlock()
@@ -116,6 +117,6 @@ class Qt4_DoorInterlockBrick(BlissWidget):
             if self.door_interlock_hwobj is not None:
                 self.connect(self.door_interlock_hwobj, QtCore.SIGNAL('doorInterlockStateChanged'), self.state_changed)
                 self.state_changed(self.door_interlock_hwobj.getState())
-            self.setDisabled(self.door_interlock_hwobj is None)
+                self.setEnabled(True)
         else:
             BlissWidget.propertyChanged(self,property_name, old_value, new_value)
