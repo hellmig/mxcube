@@ -33,8 +33,8 @@
     </beamsize>
     <detector>
       <binning>1</binning>
-      <TangoDeviceName>bl141/lima/p6m</TangoDeviceName>
-      <LimaDeviceName>bl141/lima/camera</LimaDeviceName>
+      <TangoDeviceName>bl142/lima/p2m</TangoDeviceName>
+      <LimaDeviceName>bl142/lima/camera</LimaDeviceName>
       <save_raw>0</save_raw>
       <no_xform>0</no_xform>
       <UseDefaultDarkTime>1</UseDefaultDarkTime>
@@ -44,7 +44,7 @@
     <detector>
       <manufacturer>dectris</manufacturer>
       <type>pilatus</type>
-      <model>6m</model>
+      <model>2m</model>
       <binning>1</binning>
       <mode>shutterless</mode>
       <px>0.172</px>

@@ -1,0 +1,8 @@
+<equipment class="ImageTracking">
+   <targetIP>mxcube142.psf.bessy.de</targetIP>
+   <!--
+   <channel type="tine" name="chanEnableImageTracking" tinename="/P14/image-tracker/img-tracker">load-state</channel>
+   <channel type="tine" name="chanState" tinename="/P14/image-tracker/img-tracker">status</channel>
+   -->
+</equipment>
+

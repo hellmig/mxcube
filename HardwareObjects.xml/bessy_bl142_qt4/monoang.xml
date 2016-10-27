@@ -1,0 +1,5 @@
+<device class="SpecMotor">
+  <username>Wavelength</username>
+  <specname>monoang</specname>
+  <specversion>bl142:spec</specversion>
+</device>

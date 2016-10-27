@@ -1,0 +1,14 @@
+<equipment class="BESSY142XRFSpectrum">
+  <configFile>/142dat/pxrdat/scans/pymca_config/pymca_bl142.cfg</configFile>
+  <object href="/attenuators" role="transmission"/>
+  <object href="/energy" role="energy"/>
+  <object href="/beam_info" role="beam_info"/>
+  <specversion>bl142:spec</specversion>
+  <command type="spec" name="cmdSpectrumStart">eprodc_xfespectrum</command>
+  <channel type="spec" name="chanSpectrumStatus">eprodc_energy_scan_msg</channel>
+  <channel type="spec" name="chanSpectrumConsts">XFE_CALIB</channel>
+  <channel type="spec" name="chan_mca_data" dispatchMode="None">XFE_COUNTS</channel>
+<!--
+  <device hwrid="/dbconnection" role="dbserver"/>
+-->
+</equipment>

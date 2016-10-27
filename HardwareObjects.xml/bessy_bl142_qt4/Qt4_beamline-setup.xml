@@ -1,19 +1,19 @@
 <object class="BeamlineSetup" role="BeamlineSetup">
-  <object href="/udiff" role="diffractometer"/>
-  <object href="/escfilters" role="transmission"/>
+  <object href="/nanodiff" role="diffractometer"/>
+  <object href="/attenuators" role="transmission"/>
   <object href="/beam_info" role="beam_info"/>
 
+  <!--
   <object href="/cats" role="sample_changer_one"/>
   <object href="/cats" role="sample_changer"/>
   <object href="/plate-manipulator" role="sample_changer_two"/>
 
   <object href="/plate-manipulator" role="plate_manipulator"/>
+  -->
 
   <object href="/energy" role="energy"/>
   <object href="/resolution" role="resolution"/>
   <object href="/nanodiff_omega" role="omega_axis"/>
-  <object href="/udiff_kappa" role="kappa_axis"/>
-  <object href="/udiff_kappaphi" role="kappa_phi_axis"/>
   <object href="/pilatus" role="detector"/>
   <object href="/Qt4_graphics-manager" role="shape_history"/>
   <object href="/session" role="session"/>

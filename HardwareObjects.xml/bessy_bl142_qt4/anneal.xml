@@ -1,0 +1,12 @@
+<procedure>
+  <specversion>esc142:spec</specversion>
+  <command>
+    <type>spec</type>
+    <name>Block cryostream</name>
+    <argument>
+      <name>Closing time [s]</name>
+      <type>integer</type>
+    </argument>
+    <toexecute>anneal</toexecute>
+  </command>
+</procedure>

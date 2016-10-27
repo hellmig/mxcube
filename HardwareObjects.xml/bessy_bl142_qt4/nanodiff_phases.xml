@@ -1,0 +1,5 @@
+<procedure>
+  <specversion>esc142:spec</specversion>
+  <command type="spec" name="Transfer Phase">start_transfer_phase</command>
+  <command type="spec" name="Centring Phase">start_centring_phase</command>
+</procedure>

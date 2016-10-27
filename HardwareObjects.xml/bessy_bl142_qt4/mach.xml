@@ -1,0 +1,9 @@
+<device class = "MachCurrentEpics">
+  <username>Mach</username>
+  <channel type="epics" name="fill_mode" read_as_str="True" polling="1000">FPATCC:mode</channel>
+  <!-- <channel type="epics" name="fill_mode" read_as_str="True" polling="events">TOPUPCC:message</channel> -->
+  <channel type="epics" name="ring_current" polling="1000">MDIZ3T5G:current</channel>
+  <channel type="epics" name="injection_flag" read_as_str="True" polling="1000">SRY01U014L:Injc</channel>
+  <channel type="epics" name="life_time" polling="1000">MDIZ3T5G:lt10</channel>
+</device>
+

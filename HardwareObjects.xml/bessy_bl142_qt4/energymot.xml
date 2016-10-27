@@ -1,0 +1,5 @@
+<device class="SpecMotor">
+  <username>Energy</username>
+  <specname>monoen</specname>
+  <specversion>esc142:spec</specversion>
+</device>

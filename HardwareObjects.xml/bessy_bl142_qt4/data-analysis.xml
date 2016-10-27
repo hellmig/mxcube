@@ -1,0 +1,7 @@
+<object class="DataAnalysis">
+  <object href="/Qt4_mxcollect" role="collect"/>
+  <object href="/beam_info" role="beam"/>
+  <!-- Path to script that launches edna -->
+  <edna_command>/home/mxadm/bessy/bin/edna_script.sh</edna_command>
+  <edna_default_file>/home/mxadm/mxcube/HardwareObjects.xml/bessy_bl142_qt4/edna_defaults.xml</edna_default_file>
+</object>
