@@ -240,6 +240,8 @@ class ConfirmDialog(QtGui.QDialog):
           
             if isinstance(item_model, queue_model_objects.DataCollection):
                 acq_parameters = item_model.acquisitions[0].acquisition_parameters
+            elif isinstance(item_model, queue_model_objects.Characterisation):
+                acq_parameters = item_model.reference_image_collection.acquisitions[0].acquisition_parameters
             elif isinstance(item_model, queue_model_objects.Advanced):
                 acq_parameters = item_model.reference_image_collection.\
                      acquisitions[0].acquisition_parameters 
