@@ -1,4 +1,4 @@
-<device class = "Attenuators">
+<device class = "BESSY142Attenuators">
   <username>Attenuators</username>
   <specversion>bl142:spec</specversion>
   <command type="spec" name="toggle">attio</command>
