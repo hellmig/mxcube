@@ -47,6 +47,7 @@ class DataPathWidget(QtGui.QWidget):
         self._base_image_dir = None
         self._base_process_dir = None
         self.path_conflict_state = False
+        self.enable_macros = False    ##
         
         if data_model is None:
             self._data_model = queue_model_objects.PathTemplate()
@@ -87,17 +88,27 @@ class DataPathWidget(QtGui.QWidget):
         """
         Descript. :
         """
-        get_dir = QtGui.QFileDialog(self)
-        given_dir = self._base_image_dir
-
-        d = str(get_dir.getExistingDirectory(self, given_dir,
-                                             "Select a directory", 
-                                             QtGui.QFileDialog.ShowDirsOnly))
-        d = os.path.dirname(d)
-
-        if d is not None and len(d) > 0:
-            self.set_directory(d)
-
+        file_dialog = QtGui.QFileDialog(self)
+        file_dialog.setNameFilter("%s*" % self._base_image_dir)
+        file_dialog.setFileMode(QtGui.QFileDialog.Directory)
+	
+	if not os.path.exists(self._base_image_dir):
+	    logging.getLogger("user_level_log").warning("directory '"+self._base_image_dir +"' does not yet exist and will be created at first run of datacollection")
+	    selected_dir = None
+	else:
+            d = file_dialog.getExistingDirectory(self, "Select a directory", self._base_image_dir,
+                                             QtGui.QFileDialog.DontUseNativeDialog)
+            base_dir = os.path.dirname(str(d))
+            selected_dir = os.path.basename(str(d))
+            selected_dir = os.path.join(base_dir, selected_dir)
+	if selected_dir.find(self._base_image_dir) == -1 and selected_dir !="":		
+	    logging.getLogger("user_level_log").error("Directory not allowed. Choose only subdirectories in "+ self._base_image_dir)
+	else:	
+	    if selected_dir is not None and len(selected_dir) > 0:               
+                self.set_directory(selected_dir)
+	
+	    
+            
     def _prefix_ledit_change(self, new_value):
         """
         Descript. :
@@ -134,7 +145,7 @@ class DataPathWidget(QtGui.QWidget):
         """
         base_image_dir = self._base_image_dir
         base_proc_dir = self._base_process_dir
-        new_sub_dir = str(new_value).strip(' ')
+        new_sub_dir = self._remove_special_chars_from_path(str(new_value))
 
         if len(new_sub_dir) > 0:
             if new_sub_dir[0] == os.path.sep:
@@ -151,6 +162,11 @@ class DataPathWidget(QtGui.QWidget):
                                            Qt4_widget_colors.WHITE)
 
         self.pathTemplateChangedSignal.emit()
+        
+    def _remove_special_chars_from_path(self, input_path):  
+        accepted_chars = string.ascii_letters + string.digits +"-_\/\\"
+        clean_path = filter(lambda c: c in accepted_chars, input_path)  
+        return str(clean_path)
 
     def update_file_name(self):
         """
@@ -171,6 +187,7 @@ class DataPathWidget(QtGui.QWidget):
         """
         (dir_name, file_name) = os.path.split(path)
         self.set_directory(dir_name)
+         
         file_name = file_name.replace('%' + self._data_model.precision + 'd',
                                       int(self._data_model.precision) * '#' )
         self.data_path_layout.file_name_value_label.setText(file_name)
@@ -181,8 +198,8 @@ class DataPathWidget(QtGui.QWidget):
         """
         base_image_dir = self._base_image_dir
         dir_parts = directory.split(base_image_dir)
-
-        if len(dir_parts) > 1:
+            
+        if len(dir_parts[1]) > 1:
             sub_dir = dir_parts[1]        
             self._data_model.directory = directory
             self.data_path_layout.folder_ledit.setText(sub_dir)
