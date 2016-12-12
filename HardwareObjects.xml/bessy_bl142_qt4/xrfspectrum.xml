@@ -5,6 +5,7 @@
   <object href="/beam_info" role="beam_info"/>
   <specversion>bl142:spec</specversion>
   <command type="spec" name="cmdSpectrumStart">eprodc_xfespectrum</command>
+  <command version="esc142:spec" type="spec" name="cmdPrepareAcq">start_data_collection_phase</command>
   <channel type="spec" name="chanSpectrumStatus">eprodc_energy_scan_msg</channel>
   <channel type="spec" name="chanSpectrumConsts">XFE_CALIB</channel>
   <channel type="spec" name="chan_mca_data" dispatchMode="None">XFE_COUNTS</channel>

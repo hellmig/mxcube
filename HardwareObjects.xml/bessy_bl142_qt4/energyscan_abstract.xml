@@ -3,6 +3,7 @@
   <command version="bl142:spec" type="spec" name="executeScan">eprodc_do_energy_scan</command>
   <channel version="bl142:spec" type="spec" name="xf_elem_table" dispatchMode="None">XF_ELEM</channel>
   <channel version="bl142:spec" type="spec" name="am_elem_table" dispatchMode="None">AM_ELEM</channel>
+  <command version="esc142:spec" type="spec" name="prepareScan">start_data_collection_phase</command>
   <offset_keV>0</offset_keV>
   <elements>
     <element>

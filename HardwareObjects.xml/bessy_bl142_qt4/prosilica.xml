@@ -2,5 +2,5 @@
   <username>Prosilica GC655C</username>
   <type>Prosilica</type>
   <address>169.254.1.2</address>
-  <interval>100</interval>
+  <interval>40</interval>
 </device>

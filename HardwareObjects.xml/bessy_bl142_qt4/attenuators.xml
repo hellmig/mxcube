@@ -3,8 +3,10 @@
   <specversion>bl142:spec</specversion>
   <command type="spec" name="toggle">attio</command>
   <command type="spec" name="setTransmission">transmission</command>
+  <command type="spec" name="transm_recalc">update_transmission</command>
   <channel type="spec" name="attstate">MATT_STATE</channel>
   <channel type="spec" name="attfactor">ATT_FACTOR</channel>
+  <object href="/filtmot" role="transm_filter"/>
   <atte>
      <label>Al 1.4 mm</label>
      <bits>1</bits>

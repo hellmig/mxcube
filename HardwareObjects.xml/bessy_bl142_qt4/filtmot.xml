@@ -1,5 +1,5 @@
 <device class="SpecMotor">
-  <username>Energy</username>
-  <specname>monoen</specname>
+  <username>Filter</username>
+  <specname>filt3</specname>
   <specversion>bl142:spec</specversion>
 </device>
