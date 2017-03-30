@@ -1,5 +1,5 @@
 <device class="MicrodiffLight">
-  <username>Back light</username>
+  <username>Front light</username>
   <exporter_address>192.168.27.130:9001</exporter_address>
-  <motor_name>BackLight</motor_name>
+  <motor_name>FrontLight</motor_name>
 </device>

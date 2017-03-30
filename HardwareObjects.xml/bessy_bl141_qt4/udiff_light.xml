@@ -1,8 +1,7 @@
-<device class="InOut">
-  <username>Microdiff light</username>
-  <specversion>falc141:spec</specversion>
-  <offset>0</offset>
-  <command type="spec" name="set_in">lightin</command>
-  <command type="spec" name="set_out">lightout</command>
-  <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">BackLightIsOn</channel>
+<device class="MicrodiffInOut">
+  <username>Backlight</username>
+  <exporter_address>192.168.27.130:9001</exporter_address>
+  <cmd_name>LightingValue</cmd_name>
+  <private_state>{"PARK":"out", "BACKLIGHT":"in"}</private_state>
+  <use_hwstate>True</use_hwstate>
 </device>

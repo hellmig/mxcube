@@ -1,14 +1,18 @@
-<device class="MD2v4_Aperture">
-  <username>Diameter</username>
-  <tangoname>bl141/microdiff/general</tangoname>
-  <motor_name>ApertureVertical</motor_name>
-  <unit>1e-3</unit>
-  <GUIstep>90.0</GUIstep>
-  <offset>0.0</offset>
-  <position>5</position>
-  <channel type="tango" name="current_diameter" tangoname="bl141/microdiff/general" polling="1000">ApertureDiameter</channel>
-  <channel type="tango" name="motor_attr" tangoname="bl141/microdiff/general" polling="events">ApertureVerticalPosition</channel>
-  <channel type="tango" name="motor_states" tangoname="bl141/microdiff/general" polling="events">MotorStates</channel>
-  <command type="tango" name="motor_abort" tangoname="bl141/microdiff/general">Reset</command>
-  <channel type="tango" name="diameter_attr" tangoname="bl141/microdiff/general" polling="events">AperturesDiameters</channel>
-</device>
+<object class="MicrodiffAperture">
+  <exporter_address>192.168.27.130:9001</exporter_address>
+  <diameter>
+    <name>70</name>
+    <size>0.070</size>
+    <aperture_coef>1.00</aperture_coef>
+  </diameter>
+  <diameter>
+    <name>100</name>
+    <size>0.100</size>
+    <aperture_coef>1.00</aperture_coef>
+  </diameter>
+  <diameter>
+    <name>50</name>
+    <size>0.050</size>
+    <aperture_coef>1.00</aperture_coef>
+  </diameter>
+</object>

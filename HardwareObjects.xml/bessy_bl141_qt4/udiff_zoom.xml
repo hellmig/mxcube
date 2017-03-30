@@ -1,13 +1,5 @@
-<device class="MD2v4_Zoom">
+<device class="MicrodiffZoom">
   <username>zoom</username>
-  <tangoname>bl141/microdiff/general</tangoname>
-  <motor_name>Zoom</motor_name>
-  <unit>1e-3</unit>
-  <GUIstep>90.0</GUIstep>
-  <offset>0.0</offset>
+  <exporter_address>192.168.27.130:9001</exporter_address>
   <position>5</position>
-  <channel type="tango" name="motor_attr" tangoname="bl141/microdiff/general" polling="events">ZoomPosition</channel>
-  <channel type="tango" name="motor_states" tangoname="bl141/microdiff/general" polling="events">MotorStates</channel>
-  <command type="tango" name="motor_abort" tangoname="bl141/microdiff/general">Reset</command>
-  <channel type="tango" name="predefined_position_attr" tangoname="bl141/microdiff/general" polling="events">ZoomPredefinedPosition</channel>
 </device>

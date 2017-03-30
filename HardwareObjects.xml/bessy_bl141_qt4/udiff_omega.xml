@@ -1,12 +1,7 @@
-<device class="MD2v4_Motor">
+<device class="MicrodiffMotor">
   <username>Omega</username>
-  <tangoname>bl141/microdiff/general</tangoname>
+  <exporter_address>192.168.27.130:9001</exporter_address>
   <motor_name>Omega</motor_name>
   <unit>1e-3</unit>
   <GUIstep>45.0</GUIstep>
-  <offset>0.0</offset>
-  <channel type="tango" name="device_state" tangoname="bl141/microdiff/general" polling="events">State</channel>
-  <channel type="tango" name="motor_attr" tangoname="bl141/microdiff/general" polling="events">OmegaPosition</channel>
-  <channel type="tango" name="motor_states" tangoname="bl141/microdiff/general" polling="events">MotorStates</channel>
-  <command type="tango" name="motor_abort" tangoname="bl141/microdiff/general">Reset</command>
 </device>
