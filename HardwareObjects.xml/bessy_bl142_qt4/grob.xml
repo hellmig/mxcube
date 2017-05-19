@@ -1,0 +1,124 @@
+<equipment class = "sample_changer.GROB_SC">
+  <username>GROB_SC</username>
+  <tangoname>bl142/grob/1</tangoname>    
+ 
+  <channel type="tango" name="_chnState" polling="500">State</channel>
+  
+  <command type="tango" name="_cmdAbort">abort</command>
+
+  <!-- Process I/O -->
+  <channel type="tango" name="_chnDoorIsLocked" polling="events">di_DoorIsLocked</channel>
+  <channel type="tango" name="_chnSampleIsDetected" polling="events">di_SampleIsDetected</channel>
+  <channel type="tango" name="_chnSCTransfertStateIsOn" polling="events">di_SCTransfertStateIsOn</channel>
+  <channel type="tango" name="_chnMiniToolAnnealingStateIsOn" polling="events">di_MiniToolAnnealingStateIsOn</channel>
+  <channel type="tango" name="_chnMiniToolFluoStateIsOn" polling="events">di_MiniToolFluoStateIsOn</channel>
+  <channel type="tango" name="_chnSCDetectorIsBack" polling="events">di_SCDetectorIsBack</channel>
+  <channel type="tango" name="_chnArmPowerIsOn" polling="events">do_ArmPowerIsOn</channel>
+  <channel type="tango" name="_chnArmIsHome" polling="events">do_ArmIsHome</channel>
+  <channel type="tango" name="_chnSCUnloadStateRequest" polling="events">do_SCUnloadStateRequest</channel>
+  <channel type="tango" name="_chnSCLoadStateRequest" polling="events">do_SCLoadStateRequest</channel>
+  <channel type="tango" name="_chnSCArmIsOuOfGonioArea" polling="events">do_SCArmIsOutOfGonioArea</channel>
+  <channel type="tango" name="_chnSCSampleMagnetControl" polling="events">do_SCSampleMagnetControl</channel>
+  <channel type="tango" name="_chnMiniToolAnnealingRequest" polling="events">do_MiniToolAnnealingRequest</channel>
+  <channel type="tango" name="_chnMiniToolWashingRequest" polling="events">do_MiniToolWashingRequest</channel>
+  <channel type="tango" name="_chnMiniToolFluoRequest" polling="events">do_MiniToolFluoRequest</channel>
+  <!-- Dewar  -->
+  <channel type="tango" name="_chnCryoLN2Level" polling="events">di_CryoLN2Level</channel>
+  <channel type="tango" name="_chnCryoHighLevel" polling="events">di_CryoHighLevel</channel>
+  <channel type="tango" name="_chnCryoHighLevelAlarm" polling="events">di_CryoHighLevelAlarm</channel>
+  <channel type="tango" name="_chnCryoLowLevel" polling="events">di_CryoLowLevel</channel>
+  <channel type="tango" name="_chnCryoLowLevelAlarm" polling="events">di_CryoLowLevelAlarm</channel>
+  <channel type="tango" name="_chnCryoLN2FillingValve" polling="events">do_CryoLN2FillingValve</channel>
+  <channel type="tango" name="_chnCryoGN2Valve1" polling="events">do_CryoGN2Valve1</channel>
+  <channel type="tango" name="_chnCryoGN2Valve2" polling="events">do_CryoGN2Valve2</channel>
+  <!-- Other  -->
+  <channel type="tango" name="_chnCollisionSensorOK" polling="events">di_CollisionSensorOK</channel>
+  <channel type="tango" name="_chnCalibrationTool" polling="events">di_CalibrationTool</channel>
+  <channel type="tango" name="_chnToolHeaterOnOff" polling="events">do_ToolHeaterOnOff</channel>
+  <channel type="tango" name="_chnDewarHeaterOnOff" polling="events">do_DewarHeaterOnOff</channel>
+  <channel type="tango" name="_chnToolDryer" polling="events">do_ToolDryer</channel>
+  <!-- Robot's attribut  -->
+  <channel type="tango" name="_chnPowered" polling="500">Powered</channel>
+  <!-- <channel type="tango" name="_chnPowered" polling="events">Powered</channel> -->
+  <channel type="tango" name="_chnPathRunning" polling="500">PathRunning</channel>
+  <channel type="tango" name="_chnToolIdentifier" polling="events">ToolIdentifier</channel>
+  <channel type="tango" name="_chnSpeedRatio" polling="events">SpeedRatio</channel>
+  <!-- Others  -->
+  <channel type="tango" name="_chnLastError" polling="500">LastError</channel>
+  <channel type="tango" name="_chnScanning" polling="events">Scanning</channel>
+  <channel type="tango" name="_chnCalibrating" polling="events">Calibrating</channel>
+  <channel type="tango" name="_chnDetecting" polling="events">Detecting</channel>
+  <channel type="tango" name="_chnFluoScreenIsReady" polling="events">FluoScreenIsReady</channel>
+  <channel type="tango" name="_chnAnnealingToolIsReady" polling="events">AnnealingToolIsReady</channel>
+  <channel type="tango" name="_chnLN2Regulating" polling="500">LN2Regulating</channel>
+  <channel type="tango" name="_chnLN2Warming" polling="events">LN2Warming</channel>
+  <channel type="tango" name="_chnDewarMotorPosition" polling="events">DewarMotorPosition</channel>
+  <channel type="tango" name="_chnDewarNumberOfPucks" polling="events">DewarNumberOfPucks</channel>
+  <channel type="tango" name="_chnIsPuckDetectionUptodate" polling="events">IsPuckDetectionUpToDate</channel>
+
+
+  <command type="tango" name="_cmdLoad">TransfertMountSample</command>
+  <command type="tango" name="_cmdUnload">TransfertUnmountSample</command>
+  <command type="tango" name="_cmdGetMountedSample">GetMountedSample</command>
+  <command type="tango" name="_cmdResetMountedSample">ResetMountedSample</command>
+  <command type="tango" name="_cmdScanSample">ScanSample</command>
+  <command type="tango" name="_cmdScanPuck">ScanPuck</command>
+  <command type="tango" name="_cmdScanDewar">ScanDewar</command>
+  <command type="tango" name="_cmdReadSampleBarcode">ReadSampleBarcode</command>
+  <command type="tango" name="_cmdReadPuckSampleBarcodes">ReadPuckSampleBarcodes</command>
+  <command type="tango" name="_cmdToolDrying">ToolDrying</command>
+  <command type="tango" name="_cmdToolDryingLimit">ToolDryingLimit</command>
+  <command type="tango" name="_cmdToolDryingDuration">ToolDryingDuration</command>
+  <command type="tango" name="_cmdToolHeaterOn">ToolHeaterOn</command>
+  <command type="tango" name="_cmdToolHeaterOff">ToolHeaterOff</command>
+  <command type="tango" name="_cmdDewarHeaterOn">DewarHeaterOn</command>
+  <command type="tango" name="_cmdDewarHeaterOff">DewarHeaterOff</command>
+
+  <!-- Minitools -->
+  <command type="tango" name="_cmdAnnealing">Annealing</command>
+  <command type="tango" name="_cmdStopAnnealing">StopAnnealing</command>
+  <command type="tango" name="_cmdWashing">Washing</command>
+  <command type="tango" name="_cmdMountFluoScreen">MountFluoScreen</command>
+  <command type="tango" name="_cmdUnmountFluoScreen">UnmountFluoScreen</command>
+  <!-- Dewar -->
+  <command type="tango" name="_cmdRegulOn">RegulOn</command>
+  <command type="tango" name="_cmdRegulOff">RegulOff</command>
+  <command type="tango" name="_cmdWarmOn">WarmOn</command>
+  <command type="tango" name="_cmdWarmOff">WarmOff</command>
+  <command type="tango" name="_cmdOpenLid">OpenLid</command>
+  <command type="tango" name="_cmdCloseLid">CloseLid</command>
+  <command type="tango" name="_cmdIsLidOpened">IsLidOpened</command>
+  <command type="tango" name="_cmdDewarRotation">DewarRotation</command>
+  <!-- Puck and Sample detection -->
+  <command type="tango" name="_cmdPuckType">PuckType</command>
+  <command type="tango" name="_cmdLaunchPuckDetection">LaunchPuckDetection</command>
+  <command type="tango" name="_cmdPuckDetection">PuckDetection</command>
+  <command type="tango" name="_cmdSampleDetection">SampleDetection</command>
+  <!-- Logs -->
+  <command type="tango" name="_cmdLogin">Login</command>
+  <command type="tango" name="_cmdLogout">Logout</command>
+  <command type="tango" name="_cmdAddLog">AddLog</command>
+  <!-- Robot -->
+  <command type="tango" name="_cmdPowerOn">PowerOn</command>
+  <command type="tango" name="_cmdPowerOff">PowerOff</command>
+  <command type="tango" name="_cmdBackTraj">BackTraj</command>
+  <command type="tango" name="_cmdAbort">Abort</command>
+  <command type="tango" name="_cmdStop">Stop</command>
+  <command type="tango" name="_cmdRestart">Restart</command>
+  <command type="tango" name="_cmdReset">Reset</command>
+  <command type="tango" name="_cmdHome">Home</command>
+  <command type="tango" name="_cmdSafe">Safe</command>
+  <command type="tango" name="_cmdMountTool">MountTool</command>
+  <command type="tango" name="_cmdUnmountTool">UnmountTool</command>
+  <command type="tango" name="_cmdOpenTool">OpenTool</command>
+  <command type="tango" name="_cmdCloseTool">CloseTool</command>
+  <command type="tango" name="_cmdAlarmAcknowledge">AlarmAcknowledge</command>
+  <command type="tango" name="_cmdShuntACOn">ShuntACOn</command>
+  <command type="tango" name="_cmdShuntACOff">ShuntACOff</command>
+  <command type="tango" name="_cmdSystemErrorAcknowledge">SystemErrorAcknowledge</command>
+
+  <!-- added 2017-05-17-bessy-mh -->
+  <channel type="tango" name="_chnLid1State" polling="500">di_Lid1Open</channel>
+  <channel type="tango" name="_chnLid2State" polling="500">di_Lid2Open</channel>
+</equipment>
+
