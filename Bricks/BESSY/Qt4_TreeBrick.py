@@ -304,9 +304,15 @@ class Qt4_TreeBrick(BlissWidget):
                 self.connect(xml_rpc_server_hwobj, 'start_queue',
                              self.dc_tree_widget.collect_items)
         elif property_name == 'scOneName':
-              self.sample_changer_widget.filter_cbox.setItemText(1, new_value)
+              if self.sample_changer_hwobj is not None:
+                  self.sample_changer_widget.filter_cbox.setItemText(1, new_value)
+              else:
+                  self.sample_changer_widget.filter_cbox.removeItem(1)
         elif property_name == 'scTwoName':
-              self.sample_changer_widget.filter_cbox.setItemText(2, new_value) 
+              if self.plate_manipulator_hwobj is not None:
+                  self.sample_changer_widget.filter_cbox.setItemText(2, new_value) 
+              else:
+                  self.sample_changer_widget.filter_cbox.removeItem(2)
         else:
             BlissWidget.propertyChanged(self, property_name, old_value, new_value)
 
