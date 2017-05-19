@@ -1,5 +1,7 @@
 <procedure>
   <specversion>esc142:spec</specversion>
+  <channel type="spec" name="Active Phase">NANODIFF_CURRENT_PHASE</channel>
   <command type="spec" name="Transfer Phase">start_transfer_phase</command>
   <command type="spec" name="Centring Phase">start_centring_phase</command>
+  <command type="spec" name="Beam-location Phase">start_beam_location_phase</command>
 </procedure>
