@@ -1,5 +1,5 @@
 <device class="BESSY141MD2Camera">
   <username>Sample Video</username>
-  <interval>40</interval>
+  <interval>100</interval>
   <command type="tango" name="get_image_cmd" tangoname="bl141/microdiff/general">getImageJPG</command>
 </device>
