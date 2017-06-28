@@ -17,4 +17,6 @@
   </motors>
 
   <object role="beam_info" href="beam_info" />
+  <command type="spec" version="esc142:spec" name="start_centring_phase_cmd">start_centring_phase</command>
+  <channel type="spec" version="esc142:spec" name="phase_position" polling="500">NANODIFF_CURRENT_PHASE</channel>
 </equipment>

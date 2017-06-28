@@ -17,7 +17,7 @@
   <channel type="tango" name="_chnArmIsHome" polling="events">do_ArmIsHome</channel>
   <channel type="tango" name="_chnSCUnloadStateRequest" polling="events">do_SCUnloadStateRequest</channel>
   <channel type="tango" name="_chnSCLoadStateRequest" polling="events">do_SCLoadStateRequest</channel>
-  <channel type="tango" name="_chnSCArmIsOuOfGonioArea" polling="events">do_SCArmIsOutOfGonioArea</channel>
+  <channel type="tango" name="_chnSCArmIsOutOfGonioArea" polling="500">do_SCArmIsOutOfGonioArea</channel>
   <channel type="tango" name="_chnSCSampleMagnetControl" polling="events">do_SCSampleMagnetControl</channel>
   <channel type="tango" name="_chnMiniToolAnnealingRequest" polling="events">do_MiniToolAnnealingRequest</channel>
   <channel type="tango" name="_chnMiniToolWashingRequest" polling="events">do_MiniToolWashingRequest</channel>
@@ -120,5 +120,12 @@
   <!-- added 2017-05-17-bessy-mh -->
   <channel type="tango" name="_chnLid1State" polling="500">di_Lid1Open</channel>
   <channel type="tango" name="_chnLid2State" polling="500">di_Lid2Open</channel>
+
+  <!-- added 2017-05-17-bessy-mh: transfer request handling -->
+  <channel type="tango" name="_chnLoadStateRequest" polling="500">do_SCLoadStateRequest</channel>
+  <channel type="tango" name="_chnUnloadStateRequest" polling="500">do_SCUnloadStateRequest</channel>
+  <command type="spec" version="esc142:spec" name="_cmdStartTransferPhase">start_transfer_phase</command>
+  <command type="spec" version="esc142:spec" name="_cmdStartCentringPhase">start_centring_phase</command>
+  <channel type="spec" version="esc142:spec" name="_chnNanodiffCurrentPhase" polling="500">NANODIFF_CURRENT_PHASE</channel>
 </equipment>
 
