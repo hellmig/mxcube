@@ -405,7 +405,7 @@ class DataCollectTree(QtGui.QWidget):
 
             if sample_changer:
                 if hasattr(sample_changer, '__TYPE__')\
-                   and sample_changer.__TYPE__ in ('CATS', 'Marvin'):
+                   and sample_changer.__TYPE__ in ('CATS', 'Marvin', 'GROB_SC'):
                     sample_changer.unload(wait=True)
                 else:
                     sample_changer.unload(22, sample_location = location, wait = False)
