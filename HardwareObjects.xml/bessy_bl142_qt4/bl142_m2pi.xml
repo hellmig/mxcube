@@ -1,0 +1,8 @@
+<device class = "SpecMotor">
+  <username>Mirror2 Pitch</username>
+  <specname>m2pi</specname>
+  <specversion>bl142:spec</specversion>
+  <GUIstep>0.002</GUIstep>
+  <UpLimit>-0.52</UpLimit>
+  <DownLimit>-0.59</DownLimit>
+</device>
