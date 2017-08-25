@@ -35,6 +35,7 @@ class Qt4_GrobMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
         QtCore.QObject.connect(self.widget.btLid1Close, QtCore.SIGNAL('clicked()'), self._lid1Close)
         QtCore.QObject.connect(self.widget.btLid2Open, QtCore.SIGNAL('clicked()'), self._lid2Open)
         QtCore.QObject.connect(self.widget.btLid2Close, QtCore.SIGNAL('clicked()'), self._lid2Close)
+        QtCore.QObject.connect(self.widget.btAckManualUnmount, QtCore.SIGNAL('clicked()'), self._ackManualUnmount)
         QtCore.QObject.connect(self.widget.btAckError, QtCore.SIGNAL('clicked()'), self._ackError)
         QtCore.QObject.connect(self.widget.btBack, QtCore.SIGNAL('clicked()'), self._backTraj)                     
         QtCore.QObject.connect(self.widget.btSafe, QtCore.SIGNAL('clicked()'), self._safeTraj)                     
@@ -122,6 +123,7 @@ class Qt4_GrobMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
             self.widget.btLid1Close.setEnabled(False)
             self.widget.btLid2Open.setEnabled(False)
             self.widget.btLid2Close.setEnabled(False)
+            self.widget.btAckManualUnmount.setEnabled(False)
             self.widget.btAckError.setEnabled(False)
             self.widget.btBack.setEnabled(False)
             self.widget.btSafe.setEnabled(False)
@@ -132,6 +134,7 @@ class Qt4_GrobMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
             #ready = not self.device.isDeviceReady()
             self.widget.btPowerOn.setEnabled(ready and not self._poweredOn)
             self.widget.btPowerOff.setEnabled(ready and self._poweredOn)
+            self.widget.btAckManualUnmount.setEnabled(ready)
             self.widget.btAckError.setEnabled(ready)
             self.widget.btBack.setEnabled(ready and self._poweredOn)
             self.widget.btSafe.setEnabled(ready and self._poweredOn)
@@ -194,6 +197,14 @@ class Qt4_GrobMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
         try:
             if self.device is not None:
                 self.device._doLid2State(False)
+        except:
+            QtGui.QMessageBox.warning( self, "Error",str(sys.exc_info()[1]))
+
+    def _ackManualUnmount(self):
+        logging.getLogger("user_level_log").info("GROB: Manual unmount command received.")
+        try:
+            if self.device is not None:
+                self.device._doAckManualUnmount()
         except:
             QtGui.QMessageBox.warning( self, "Error",str(sys.exc_info()[1]))
 

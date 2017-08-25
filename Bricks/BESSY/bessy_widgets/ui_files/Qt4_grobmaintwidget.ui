@@ -162,6 +162,13 @@
      </property>
      <layout class="QHBoxLayout">
       <item>
+       <widget class="QPushButton" name="btAckManualUnmount">
+        <property name="text">
+         <string>Manual Unmount</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="btAckError">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -173,7 +180,7 @@
          <font/>
         </property>
         <property name="text">
-         <string>Acknowledge System Error</string>
+         <string>Ack System Error</string>
         </property>
        </widget>
       </item>

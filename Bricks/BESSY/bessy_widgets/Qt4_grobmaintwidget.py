@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_files/Qt4_grobmaintwidget.ui'
 #
-# Created: Fri May 19 09:19:50 2017
+# Created: Tue Aug 22 14:04:45 2017
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -102,6 +102,9 @@ class Ui_GrobMaintWidget(object):
         self.groupBox13.setObjectName(_fromUtf8("groupBox13"))
         self.hboxlayout3 = QtGui.QHBoxLayout(self.groupBox13)
         self.hboxlayout3.setObjectName(_fromUtf8("hboxlayout3"))
+        self.btAckManualUnmount = QtGui.QPushButton(self.groupBox13)
+        self.btAckManualUnmount.setObjectName(_fromUtf8("btAckManualUnmount"))
+        self.hboxlayout3.addWidget(self.btAckManualUnmount)
         self.btAckError = QtGui.QPushButton(self.groupBox13)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -182,7 +185,8 @@ class Ui_GrobMaintWidget(object):
         self.groupBox6.setTitle(QtGui.QApplication.translate("GrobMaintWidget", "Robot message", None, QtGui.QApplication.UnicodeUTF8))
         self.lblMessage.setText(QtGui.QApplication.translate("GrobMaintWidget", "Dummy message", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox13.setTitle(QtGui.QApplication.translate("GrobMaintWidget", "Recovery Commands", None, QtGui.QApplication.UnicodeUTF8))
-        self.btAckError.setText(QtGui.QApplication.translate("GrobMaintWidget", "Acknowledge System Error", None, QtGui.QApplication.UnicodeUTF8))
+        self.btAckManualUnmount.setText(QtGui.QApplication.translate("GrobMaintWidget", "Manual Unmount", None, QtGui.QApplication.UnicodeUTF8))
+        self.btAckError.setText(QtGui.QApplication.translate("GrobMaintWidget", "Ack System Error", None, QtGui.QApplication.UnicodeUTF8))
         self.btBack.setText(QtGui.QApplication.translate("GrobMaintWidget", "Back", None, QtGui.QApplication.UnicodeUTF8))
         self.btSafe.setText(QtGui.QApplication.translate("GrobMaintWidget", "Safe", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox5_2.setTitle(QtGui.QApplication.translate("GrobMaintWidget", "LN2 Regulation", None, QtGui.QApplication.UnicodeUTF8))
