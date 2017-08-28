@@ -19,4 +19,14 @@
   <object role="beam_info" href="beam_info" />
   <command type="spec" version="esc142:spec" name="start_centring_phase_cmd">start_centring_phase</command>
   <channel type="spec" version="esc142:spec" name="phase_position" polling="500">NANODIFF_CURRENT_PHASE</channel>
+
+  <!-- added 2017-08-28-bessy-mh: transfer request handling , moved from GROB_SC-->
+  <samplechanger>/grob</samplechanger>
+  <channel type="tango" tangoname="bl142/grob/1" name="_chnLoadStateRequest" polling="500">do_SCLoadStateRequest</channel>
+  <channel type="tango" tangoname="bl142/grob/1" name="_chnUnloadStateRequest" polling="500">do_SCUnloadStateRequest</channel>
+
+  <command type="spec" version="esc142:spec" name="_cmdStartTransferPhase">start_transfer_phase</command>
+  <command type="spec" version="esc142:spec" name="_cmdStartCentringPhase">start_centring_phase</command>
+  <channel type="spec" version="esc142:spec" name="_chnNanodiffCurrentPhase" polling="500">NANODIFF_CURRENT_PHASE</channel>
+  <!-- 2017-08-28-bessy-mh: transfer request handling end -->
 </equipment>
