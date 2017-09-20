@@ -1,34 +1,32 @@
-<object class="BESSY141MultiCollect">
-  
+<object class="BESSY141DataCollectA">
+  <default_exposure_time>0.1</default_exposure_time>
   <object href="/udiff" role="diffractometer"/>
-  <object href="/mxlocal" role="beamline_configuration"/>
-  <object href="/sc-mockup" role="sample_changer"/>
-  <object href="/energy" role="energy"/>
-  <object href="/escfilters" role="transmission"/>
-  <object href="/pilatus" role="detector"/>
-  <object href="/resolution" role="resolution"/>
-  <object href="/lims-client-mockup" role="dbserver"/> 
   <object href="/safshut" role="safety_shutter"/> 
+  <!-- new -->
+  <object href="/beam_info" role="beam_info"/>
+  <object href="/mach" role="machine_current"/>
+  <!-- new -->
+  <object href="/pilatus" role="detector"/>
+  <object href="/energy" role="energy"/>
+  <object href="/resolution" role="resolution"/>
+  <object href="/escfilters" role="transmission"/>
+  <!-- new
+    <object href="/auto-processing" role="auto_processing"/>
+  -->
+  <object href="/lims-client-mockup" role="dbserver"/> 
+  <object href="/cats" role="sample_changer"/>
+  <object href="/Qt4_graphics-manager" role="graphics_manager"/>
+
+  <!-- unused in EMBL implementation but probably needed -->
   <object href="/flux" role="flux"/> 
   <object href="/cryospy" role="cryo_stream"/>
   <object href="/distccd" role="detector_distance"/>
-  <object href="/pilatus" role="detector"/>
-
-  <auto_processing>
-      <program>
-      <executable>not_existing_executable_1</executable>
-      <event>after</event>
-    </program>
-    <program>
-      <executable>not_existing_executable_2</executable>
-      <event>image</event>
-    </program>
-    </auto_processing>
+  <!-- unused in EMBL implementation but probably needed -->
 
   <specversion>falc141:spec</specversion>
-  <command type="spec" name="get_resolution_at_corner">getMxResolutionAtCorner</command>
-  <command type="spec" name="get_beam_size_x">getMxBeamSizeX</command>
-  <command type="spec" name="get_beam_size_y">getMxBeamSizeY</command>
+  <command type="spec" version="falc141:spec" name="get_resolution_at_corner">getMxResolutionAtCorner</command>
+  <command type="spec" version="falc141:spec" name="get_beam_size_x">getMxBeamSizeX</command>
+  <command type="spec" version="falc141:spec" name="get_beam_size_y">getMxBeamSizeY</command>
   <command type="spec" name="get_slit_gap_h">getMxSlitGapHorizontal</command>
   <command type="spec" name="get_slit_gap_v">getMxSlitGapVertical</command>
   <command type="spec" name="get_beam_shape">getMxBeamShape</command>
@@ -55,20 +53,4 @@
   <channel type="spec" version="falc141:spec" name="xds_filename">XDS_INPUT_FILENAME</channel>
   <channel type="spec" version="falc141:spec" name="spec_messages">eprodc_log_message</channel>
   <channel type="spec" version="falc141:spec" name="detector">MXBCM_PARS["detector"]["cansum"]</channel>
-  <!-- helical
-  ID 23
-  <channel type="spec" version="falc141:spec" name="helical">HELICAL_OSCIL</channel>
-  <channel type="spec" version="falc141:spec" name="helical_pos">HELICAL_OSCIL_POS</channel>
-  <channel type="spec" version="falc141:spec" name="helical_pars">HELICAL_PARS</channel>
-  -->
-  <!-- helical
-  ID 29 -->
-  <channel type="spec" version="falc141:spec" name="helical">HELICAL_SCAN4D</channel>
-  <channel type="spec" version="falc141:spec" name="helical_pos">HELICAL_OSCIL_POS</channel>
-  <channel type="spec" version="falc141:spec" name="helical_pars">HELICAL_PARS</channel>
-  <channel type="spec" version="falc141:spec" name="scan4d">HELICAL_SCAN4D</channel>
-  <channel type="spec" version="falc141:spec" name="scan4dm">HELICAL_SCAN4D_MANUAL</channel>
-  <command type="spec" version="falc141:spec" name="helical_queue">helical_queue</command>
-  <command type="spec" version="falc141:spec" name="helical_off">helical_scan4d_off</command>
-  <!-- -->
 </object>

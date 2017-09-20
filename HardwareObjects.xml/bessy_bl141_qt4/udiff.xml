@@ -1,65 +1,47 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<equipment class="Microdiff">
+<object class="BESSY141Microdiff">
   <exporter_address>192.168.27.130:9001</exporter_address>
-  <username>Microdiff</username>
-  <device role="camera" hwrid="/udiff_camera" />
-  <phaseList>("Transfer", "Centring", "DataCollection", "BeamLocation")</phaseList>
-  <motors>
-    <phi>
-      <device role="phi" hwrid="/udiff_omega"></device>
-      <device role="phiz" hwrid="/udiff_phiz"></device>
-    </phi>
-    <sample>
-      <device role="zoom" hwrid="/udiff_zoom"/>
-      <device role="lightLevel" hwrid="/udiff_lightmot"/>
-      <device role="light" hwrid="/udiff_lightmot"/>
-      <device role="flight" hwrid="/udiff_flightmot"/>
-      <device role="lightInOut" hwrid="/udiff_light"/>
-      <device role="focus" hwrid="/udiff_phix"/>
-      <device role="phiy" hwrid="/udiff_phiy"/>
-      <device role="sampx" hwrid="/udiff_sampx"/>
-      <device role="sampy" hwrid="/udiff_sampy"/>
-      <device role="kappa" hwrid="/udiff_kappa"/>
-      <device role="kappa_phi" hwrid="/udiff_kappaphi"/>
-    </sample>
-    <more>
-      <device hwrid="/distccd"/>
-<!--
-      <device hwrid="/exp/shuty"/>
-      <device hwrid="/exp/shutz"/>
--->      
-    </more>
-  </motors>
-
+  <channel type="exporter" name="CoaxCamScaleX">CoaxCamScaleX</channel>
+  <channel type="exporter" name="CoaxCamScaleY">CoaxCamScaleY</channel>
+  <channel type="exporter" name="HeadType">HeadType</channel>
   <channel type="exporter" name="CurrentPhase">CurrentPhase</channel>
+  <channel type="exporter" name="FastShutterIsOpen">FastShutterIsOpen</channel>
+  <channel type="exporter" name="State">State</channel>
+  <channel type="exporter" name="ScintillatorPosition">ScintillatorPosition</channel>
+  <channel type="exporter" name="CapillaryPosition">CapillaryPosition</channel>
 
-  <object role="beam_info" href="beam_info" />
-  <object role="centring" href="/centring-math" />
+  <command type="exporter" name="startSetPhase">startSetPhase</command>
+  <command type="exporter" name="startAutoFocus">startAutoFocus</command>
+  <command type="exporter" name="saveCentringPositions">saveCentringPositions</command>
+  <command type="exporter" name="getOmegaMotorDynamicScanLimits">getOmegaMotorDynamicScanLimits</command>
+  <command type="exporter" name="startSimultaneousMoveMotors">startSimultaneousMoveMotors</command>
 
-  <aperture>/udiff_aperturemot</aperture>
-  <samplechanger>/cats</samplechanger>
-  <wagolight>/udiff_light</wagolight>
-  <channel version="falc141:spec" type="spec" name="auto_centring_flag">AUTO_CENTRING_FLAG</channel>
-  <channel version="falc141:spec" type="spec" name="auto_loop_centring_enabled">ENABLE_AUTO_LOOP_CENTRING</channel>
-  <channel version="falc141:spec" type="spec" name="auto_crystal_centring_enabled">ENABLE_AUTO_CRYSTAL_CENTRING</channel>
-  <channel version="falc141:spec" type="spec" name="playback_centring_enabled">ENABLE_PLAYBACK_CENTRING</channel>
-  <command version="falc141:spec" type="spec" name="getBeamSizeX">getMxBeamSizeX</command>
-  <command version="falc141:spec" type="spec" name="getBeamSizeY">getMxBeamSizeY</command>
-  <command version="falc141:spec" type="spec" name="getBeamShape">getMxBeamShape</command>
-  <!-- 2011-08-26-mh: add new spec command which is used from the HutchMenuBrick -->
-  <!--                to-do: find out where this command is found in ESRF sources -->
-  <command version="falc141:spec" type="spec" name="getBeamInfo">getMxBeamInfo</command>
-  <!-- 2011-08-26-mh: end -->
-  <!--
-  <channel type="tango" name="state" tangoname="bl141/microdiff/general" polling="events">State</channel>
-  <channel type="tango" name="phase_position" tangoname="bl141/microdiff/general">PhasePosition</channel>
-  <command type="tango" name="sync_move_cmd" tangoname="bl141/microdiff/general">SyncMoveMotors</command>
-  <command type="tango" name="save_centring_position" tangoname="bl141/microdiff/general">saveCentringPositions</command>
-  <channel type="tango" name="beam_is_located" tangoname="bl141/microdiff/general" polling="events">BeamIsLocated</channel>
-  <command type="tango" name="centring_click_cmd" tangoname="bl141/microdiff/general">SetCentringClick</command>
-  <command type="tango" name="start_centring_phase_cmd" tangoname="bl141/microdiff/general">StartManualSampleCentring</command>
+  <object href="/udiff_omega" role="phi"/>
+  <object href="/udiff_phiz"  role="phiz"/>
+  <object href="/udiff_phiy"  role="phiy"/>
+  <object href="/udiff_zoom"  role="zoom"/>
+  <object href="/udiff_phix"  role="focus"/>
+  <object href="/udiff_sampx" role="sampx"/>
+  <object href="/udiff_sampy" role="sampy"/>
+  <object href="/udiff_kappa" role="kappa"/>
+  <object href="/udiff_kappaphi" role="kappa_phi"/>
+  <object href="/udiff_camera" role="camera"/>
+  <object href="/beam_info" role="beam_info"/>
+  <object href="/centring-math" role="centring"/>
+
+  <use_sample_changer>True</use_sample_changer>
+
+  <!-- 2017-09-14-bessy-mh: functionality unclear, start with defaults from the implementation
+  <zoom_centre>{"x": 668,"y": 612}</zoom_centre>
   -->
 
-  <!-- <command type="tango" name="save_centring_positions" tangoname="tango://192.168.27.130:20000/bl141/microdiff/general#dbase=no">saveCentringPositions</command> -->
-  <command type="exporter" name="save_centring_positions" exporter_address="192.168.27.130:9001">saveCentringPositions</command>
-</equipment>
+  <!-- Alignment Z -->
+  <!-- old value -0.101 -->
+  
+  <!-- 2017-09-14-bessy-mh: functionality unclear, start with defaults from the implementation
+  <omega_reference>{"motor_name": "phiz", "position": -0.143, "camera_axis":"y","direction": -1}</omega_reference>
+  -->
+  <grid_direction>{"fast": (1, 0), "slow": (0, -1), "omega_ref" : 0.0}</grid_direction>
+  <phase_list>("Transfer", "Centring", "DataCollection", "BeamLocation")</phase_list>
+</object>
+
