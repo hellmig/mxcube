@@ -2,7 +2,7 @@
 
 <object class = "Session" role = "session">  
 <!-- <object class = "SessionBessy" role = "session">  -->
-  <synchotron_name>BESSY II</synchotron_name>
+  <synchrotron_name>BESSY II</synchrotron_name>
   <endstation_name>bessy-bl141-eh1</endstation_name>
   <beamline_name>BL14.1</beamline_name>
 
