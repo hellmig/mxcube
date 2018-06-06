@@ -1,9 +1,9 @@
 [submodule "HardwareRepository"]
 	path = HardwareRepository
-	url = git://github.com/mxcube/HardwareRepository
+	url = https://hellmig@github.com/hellmig/HardwareRepository.git
 [submodule "BlissFramework"]
 	path = BlissFramework
-	url = git://github.com/mxcube/BlissFramework
+	url = https://hellmig@github.com/hellmig/BlissFramework.git
 [submodule "HardwareObjects"]
 	path = HardwareObjects
-	url = git://github.com/mxcube/HardwareObjects
+	url = https://hellmig@github.com/hellmig/HardwareObjects.git
