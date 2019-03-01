@@ -753,6 +753,8 @@ class DataCollectTree(QtGui.QWidget):
         self.enable_sample_changer_widget(False)
         self.collecting = True
         self.collect_button.setText(" Stop   ")
+        # 2019-03-01-bessy-mh: WIP proper implementation of the Stop button during data acquisitions
+        # self.collect_button.setDisabled(True)
         Qt4_widget_colors.set_widget_color(
                           self.collect_button, 
                           Qt4_widget_colors.LIGHT_RED,

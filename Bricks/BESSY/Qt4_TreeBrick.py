@@ -294,6 +294,11 @@ class Qt4_TreeBrick(BlissWidget):
 
             if hasattr(bl_setup, 'diffractometer_hwobj'):
                 self.diffractometer_hwobj = bl_setup.diffractometer_hwobj
+
+            if hasattr(bl_setup, 'collect_hwobj'):
+                self.collect_hwobj = bl_setup.collect_hwobj
+                self.connect(self.collect_hwobj, "collectImageTaken", self.enable_stop_button)
+
         elif property_name == 'xml_rpc_server':
             xml_rpc_server_hwobj = self.getHardwareObject(new_value)
 
@@ -1013,3 +1018,8 @@ class Qt4_TreeBrick(BlissWidget):
     def propagate_queue_exec_status(self, state):
         self.queue_execution_interlock_enabled = not state
         self.emit(QtCore.SIGNAL("disable_queue_operation_interlock"), state)
+
+    def enable_stop_button(self, value):
+        # 2019-03-01-bessy-mh: WIP proper implementation of the Stop button during data acquisitions
+        # self.dc_tree_widget.collect_button.setDisabled(value < 1)
+        pass
