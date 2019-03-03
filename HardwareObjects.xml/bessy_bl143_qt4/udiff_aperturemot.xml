@@ -1,0 +1,18 @@
+<object class="MicrodiffAperture">
+  <exporter_address>192.168.27.140:9001</exporter_address>
+  <diameter>
+    <name>70</name>
+    <size>0.070</size>
+    <aperture_coef>1.00</aperture_coef>
+  </diameter>
+  <diameter>
+    <name>100</name>
+    <size>0.100</size>
+    <aperture_coef>1.00</aperture_coef>
+  </diameter>
+  <diameter>
+    <name>50</name>
+    <size>0.050</size>
+    <aperture_coef>1.00</aperture_coef>
+  </diameter>
+</object>

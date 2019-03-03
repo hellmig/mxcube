@@ -1,0 +1,67 @@
+<device class = "BESSY143Attenuators">
+  <username>Attenuators</username>
+  <specversion>bl143:spec</specversion>
+  <command type="spec" name="toggle">attio</command>
+  <command type="spec" name="setTransmission">transmission</command>
+  <command type="spec" name="transm_recalc">update_transmission</command>
+  <channel type="spec" name="attstate">MATT_STATE</channel>
+  <channel type="spec" name="attfactor">ATT_FACTOR</channel>
+  <object href="/filtmot" role="transm_filter"/>
+  <atte>
+     <label>Al 1.4 mm</label>
+     <bits>1</bits>
+  </atte>
+  <atte>
+     <label>Al 1.2 mm</label>
+     <bits>2</bits>
+  </atte>
+  <atte>
+     <label>Al 1.0 mm</label>
+     <bits>4</bits>
+  </atte>
+  <atte>
+     <label>Al 0.8 mm</label>
+     <bits>8</bits>
+  </atte>
+  <atte>
+     <label>Al 0.63 mm</label>
+     <bits>16</bits>
+  </atte>
+  <atte>
+     <label>Al 0.53 mm</label>
+     <bits>32</bits>
+  </atte>
+  <atte>
+     <label>Al 0.40 mm</label>
+     <bits>64</bits>
+  </atte>
+  <atte>
+     <label>Al 0.29 mm</label>
+     <bits>128</bits>
+  </atte>
+  <atte>
+     <label>Al 0.19 mm</label>
+     <bits>256</bits>
+  </atte>
+  <atte>
+     <label>Al 0.12 mm</label>
+     <bits>512</bits>
+  </atte>
+  <atte>
+     <label>Al 0.09 mm</label>
+     <bits>1024</bits>
+  </atte>
+  <atte>
+     <label>Al 0.06 mm</label>
+     <bits>2048</bits>
+  </atte>
+  <atte>
+     <label>Al 0.03 mm</label>
+     <bits>4096</bits>
+  </atte>
+  <atte>
+     <label>no filter</label>
+     <bits>8192</bits>
+  </atte>
+</device>
+

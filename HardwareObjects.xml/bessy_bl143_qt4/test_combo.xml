@@ -1,0 +1,25 @@
+<procedure>
+ <specversion>exp143:spec</specversion>
+ <command>
+    <type>spec</type>
+    <name>Block cryostream</name>
+    <argument>
+      <name>Blocking period</name>
+      <type>combo
+        <item>
+             <name>Short</name>
+             <value>1</value>
+        </item>
+        <item>
+             <name>Medium</name>
+             <value>3</value>
+        </item>
+        <item>
+             <name>Long</name>
+             <value>5</value>
+        </item>
+      </type>
+    </argument>
+    <toexecute>incs_select_3</toexecute>
+ </command>
+</procedure>

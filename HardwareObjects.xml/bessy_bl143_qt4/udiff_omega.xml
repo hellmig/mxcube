@@ -1,0 +1,7 @@
+<device class="MicrodiffMotor">
+  <username>Omega</username>
+  <exporter_address>192.168.27.140:9001</exporter_address>
+  <motor_name>Omega</motor_name>
+  <unit>1e-3</unit>
+  <GUIstep>45.0</GUIstep>
+</device>

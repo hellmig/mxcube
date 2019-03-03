@@ -1,0 +1,7 @@
+<device class="MicrodiffInOut">
+  <username>Backlight</username>
+  <exporter_address>192.168.27.140:9001</exporter_address>
+  <cmd_name>LightingValue</cmd_name>
+  <private_state>{"PARK":"out", "BACKLIGHT":"in"}</private_state>
+  <use_hwstate>True</use_hwstate>
+</device>
