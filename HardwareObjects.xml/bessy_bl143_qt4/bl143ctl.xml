@@ -2,6 +2,5 @@
   <specversion>bl143:spec</specversion>
   <channel type="spec" name="Beam intensity [nA]">I_IC</channel>
   <command type="spec" name="Update beamline status">getfull</command>
-  <command type="spec" name="Optimise Intensity">optimise</command>
-<!--  <command type="spec" name="Optimise Position">optimise_position</command> -->
+  <command type="spec" name="Optimise Intensity">findmax</command>
 </procedure>

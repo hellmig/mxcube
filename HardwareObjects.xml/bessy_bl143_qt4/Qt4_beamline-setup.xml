@@ -16,7 +16,7 @@
   <object href="/udiff_omega" role="omega_axis"/>
   <object href="/udiff_kappa" role="kappa_axis"/>
   <object href="/udiff_kappaphi" role="kappa_phi_axis"/>
-  <object href="/marmosaic" role="detector"/>
+  <object href="/marmosaic225" role="detector"/>
   <object href="/Qt4_graphics-manager" role="shape_history"/>
   <object href="/session" role="session"/>
 

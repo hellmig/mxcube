@@ -17,7 +17,7 @@
   </inhouse_users>
 
   <file_info>
-    <file_suffix>cbf</file_suffix>
+    <file_suffix>img</file_suffix>
     <!-- <base_directory>/141dat/${DIFFDATSEL}/${USER}</base_directory> -->
     <!-- <base_directory>/141dat/mxcube2_tests</base_directory> -->
     <base_directory>/143dat/${DIFFDATSEL}/${USER}</base_directory>

@@ -1,15 +1,15 @@
-<object class="BESSY143BeamInfo">
+<object class="BESSYMD2BeamInfo">
     <device role="camera" hwrid="/udiff_camera"/>
     <device role="aperture" hwrid="/udiff_aperturemot"/>
     <beam_size_slits>0.2 0.2</beam_size_slits>
     <beam_divergence_vertical>6.5</beam_divergence_vertical>
     <beam_divergence_horizontal>104</beam_divergence_horizontal>
     <!-- 
-    <exporter_address>192.168.27.130:9001</exporter_address>
+    <exporter_address>192.168.27.140:9001</exporter_address>
     <channel type="exporter" name="beam_horizontal_position" polling="events">BeamPositionHorizontal</channel>
     <channel type="exporter" name="beam_vertical_position" pollling="events">BeamPositionVertical</channel>
     -->
-    <channel type="tango" tangoname="bl141/microdiff/general" polling="500" name="beam_horizontal_position">BeamPositionHorizontal</channel>
-    <channel type="tango" tangoname="bl141/microdiff/general" polling="500" name="beam_vertical_position">BeamPositionVertical</channel>
+    <channel type="tango" tangoname="bl143/microdiff/general" polling="500" name="beam_horizontal_position">BeamPositionHorizontal</channel>
+    <channel type="tango" tangoname="bl143/microdiff/general" polling="500" name="beam_vertical_position">BeamPositionVertical</channel>
 </object>
 

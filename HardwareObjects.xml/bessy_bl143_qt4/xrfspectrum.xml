@@ -1,4 +1,4 @@
-<equipment class="BESSY143XRFSpectrum">
+<equipment class="BESSYXRFSpectrum">
   <configFile>/143dat/pxrdat/scans/pymca_config/pymca_bl143.cfg</configFile>
   <object href="/attenuators" role="transmission"/>
   <object href="/energy" role="energy"/>

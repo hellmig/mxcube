@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object class="Mar225">
+   <manufacturer>Rayonix</manufacturer>
+   <type>mar225</type>
+   <model>MX-255</model>
+   <file_suffix>img</file_suffix>
+
+   <create_remote_path_ssh>False</create_remote_path_ssh>
+
+   <mar_device>bl143/ccd/1</mar_device>
+   <!--
+   <lima_device>bl141/lima/camera</lima_device>
+   <pilatus_device>bl141/lima/p6m</pilatus_device>
+   -->
+   <!-- control>exp141b</control -->
+   <buffer>/</buffer>
+   <minE>5.0</minE>
+   <deadtime>0.003</deadtime>
+   <serial># Detector: PILATUS 6M, S/N 60-0118</serial>
+   <minimum_exposure_time>1.0</minimum_exposure_time>
+   <default_exposure_time>1.0</default_exposure_time>
+
+   <px>0.073242</px>
+   <py>0.073242</py>
+   <width>221</width>
+   <height>221</height>
+
+    <beam>
+        <ax>0.000001</ax>
+        <ay>0.000001</ay>
+        <bx>112.426</bx>
+        <by>112.426</by>
+    </beam>
+</object>
+

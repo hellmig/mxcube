@@ -6,7 +6,7 @@
   <!-- <object href="/distccd" role="detm"/> -->
   <object href="/distccd" role="dtox"/>
   <!-- <object href="/monoang" role="wavelength"/> -->
-  <object href="/pilatus" role="detector"/>
+  <object href="/marmosaic225" role="detector"/>
   <object href="/energy" role="energy"/>
   <!-- <command type="spec" version="falc141:spec" name="detector_radius">_getRadius</command> -->
 </equipment>

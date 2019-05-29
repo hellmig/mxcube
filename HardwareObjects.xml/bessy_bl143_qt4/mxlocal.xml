@@ -54,7 +54,7 @@
     </detector>
     <detector_radius>215.0</detector_radius>
     <pixelsize>172.00</pixelsize>
-    <FileSuffix>cbf</FileSuffix>
+    <FileSuffix>img</FileSuffix>
     <minimum_exposure_time>1.0</minimum_exposure_time>
     <minimum_phi_speed>0.01</minimum_phi_speed>
     <minimum_phi_oscillation>0.01</minimum_phi_oscillation>

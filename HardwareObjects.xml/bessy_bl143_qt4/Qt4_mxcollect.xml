@@ -5,7 +5,7 @@
   <object href="/sc-mockup" role="sample_changer"/>
   <object href="/energy" role="energy"/>
   <object href="/attenuators" role="transmission"/>
-  <object href="/marmosaic" role="detector"/>
+  <object href="/marmosaic225" role="detector"/>
   <object href="/resolution" role="resolution"/>
   <object href="/lims-client-mockup" role="dbserver"/> 
   <object href="/safshut" role="safety_shutter"/> 
