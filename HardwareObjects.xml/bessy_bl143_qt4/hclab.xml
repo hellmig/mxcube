@@ -1,0 +1,8 @@
+<device class="HCLab">
+  <resolution>1e-3</resolution>
+  <exporter_address>192.168.27.140:9100</exporter_address>
+  <username>HCLab</username>
+  <channel type="exporter" name="Humidity">RH</channel>
+  <channel type="exporter" name="State">ModbusControllerState</channel>
+</device>
+
