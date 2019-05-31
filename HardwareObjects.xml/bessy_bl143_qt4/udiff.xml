@@ -36,6 +36,8 @@
   <object role="beam_info" href="beam_info" />
   <object role="centring" href="/centring-math" />
 
+  <centring_phi_direction>+1</centring_phi_direction>
+
   <aperture>/udiff_aperturemot</aperture>
   <samplechanger>/sc-mockup</samplechanger>
   <wagolight>/udiff_light</wagolight>
