@@ -61,8 +61,8 @@ class Qt4_m2pitchBrick(BlissWidget):
         # Pitch Limits 
         """Additionally to the spec pitch limits"""
 
-        self.limitUp = -0.52 
-        self.limitDown = -0.59
+        self.limitUp = -0.294   #old -0.52 
+        self.limitDown = -0.34  #old -0.59
         self.hwobj_limitUp = []
         self.hwobj_limitDown = []
 
