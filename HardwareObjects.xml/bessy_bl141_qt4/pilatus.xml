@@ -2,7 +2,7 @@
 <object class="Pilatus">
    <manufacturer>DECTRIS</manufacturer>
    <type>pilatus</type>
-   <model>Pilatus2_6M</model>
+   <model>Pilatus3_6M</model>
    <file_suffix>cbf</file_suffix>
 
    <create_remote_path_ssh>False</create_remote_path_ssh>
@@ -13,9 +13,9 @@
    <buffer>/</buffer>
    <minE>5.0</minE>
    <deadtime>0.003</deadtime>
-   <serial># Detector: PILATUS 6M, S/N 60-0118</serial>
-   <minimum_exposure_time>0.1</minimum_exposure_time>
-   <default_exposure_time>0.1</default_exposure_time>
+   <serial># Detector: PILATUS3 6M, S/N 60-0138</serial>
+   <minimum_exposure_time>0.04</minimum_exposure_time>
+   <default_exposure_time>0.04</default_exposure_time>
 
    <px>0.172</px>
    <py>0.172</py>
@@ -25,7 +25,7 @@
     <beam>
         <ax>0.000001</ax>
         <ay>0.000001</ay>
-        <bx>213.504</bx>
+        <bx>211.732</bx>
         <by>216.686</by>
     </beam>
 </object>
