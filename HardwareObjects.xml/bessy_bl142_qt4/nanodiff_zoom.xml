@@ -5,6 +5,7 @@
   <specname>zoom</specname>
   <delta>0.1</delta>
   <positions>
+<!--
     <position>
       <username>Zoom 1</username>
       <offset>1</offset>
@@ -14,6 +15,7 @@
         <pixelsPerMmZ>301</pixelsPerMmZ>
       </calibrationData>
     </position>
+-->
     <position>
       <username>Zoom 2</username>
       <offset>2</offset>
