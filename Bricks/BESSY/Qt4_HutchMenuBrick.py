@@ -54,7 +54,7 @@ class Qt4_HutchMenuBrick(BlissWidget):
         # Internal values -----------------------------------------------------
         self.inside_data_collection =  None
         self.full_centring_done = None  
-        self.directory = "/tmp"
+        self.directory = "./"
         self.prefix = "snapshot" 
         self.file_index = 1
 
