@@ -1,0 +1,9 @@
+<device class="Qt4_TangoLimaVideo">
+  <username>Prosilica GC655C</username>
+  <type>prosilica</type>
+  <encoding>rgb24</encoding>
+  <tangoname>bl142/lima/prosilica</tangoname>
+  <!-- <gain>0.5</gain> -->
+  <exposure>0.1</exposure>
+  <interval>30</interval>
+</device>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <equipment class="Nanodiff">
   <username>Nanodiff</username>
-  <device role="camera" hwrid="/prosilica"></device>
+  <device role="camera" hwrid="/prosilica_tango"></device>
   <motors>
     <phi>
       <device role="phi" hwrid="/nanodiff_omega"></device>
