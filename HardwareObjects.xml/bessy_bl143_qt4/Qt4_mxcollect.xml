@@ -5,7 +5,7 @@
   <object href="/sc-mockup" role="sample_changer"/>
   <object href="/energy" role="energy"/>
   <object href="/attenuators" role="transmission"/>
-  <object href="/marmosaic225" role="detector"/>
+  <object href="/pilatus" role="detector"/>
   <object href="/resolution" role="resolution"/>
   <object href="/lims-client-mockup" role="dbserver"/> 
   <object href="/safshut" role="safety_shutter"/> 
@@ -41,7 +41,7 @@
   <command type="spec" name="build_collect_seq">build_collect_seq</command>
   <command type="spec" name="validate_collect_parameters">validate_collect_parameters</command>
   <command type="spec" name="do_oscillation">osc_scan</command>
-  <command type="spec" name="prepare_acquisition">mccdprep</command>
+  <command type="spec" name="prepare_acquisition">pilatus_prep</command>
   <command type="spec" name="start_acquisition">ccdstart</command>
   <command type="spec" name="flush_detector">ccdflush</command>
   <channel type="spec" name="image_intensity">CURRENT_IMAGE_INTENSITY</channel>

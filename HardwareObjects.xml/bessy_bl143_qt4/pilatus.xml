@@ -7,8 +7,8 @@
 
    <create_remote_path_ssh>False</create_remote_path_ssh>
 
-   <lima_device>bl141/lima/camera</lima_device>
-   <pilatus_device>bl141/lima/p6m</pilatus_device>
+   <lima_device>bl143/lima/camera</lima_device>
+   <pilatus_device>bl143/lima/p6m</pilatus_device>
    <!-- control>exp141b</control -->
    <buffer>/</buffer>
    <minE>5.0</minE>

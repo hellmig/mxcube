@@ -16,7 +16,7 @@
   <object href="/udiff_omega" role="omega_axis"/>
   <object href="/udiff_kappa" role="kappa_axis"/>
   <object href="/udiff_kappaphi" role="kappa_phi_axis"/>
-  <object href="/marmosaic225" role="detector"/>
+  <object href="/pilatus" role="detector"/>
   <object href="/Qt4_graphics-manager" role="shape_history"/>
   <object href="/session" role="session"/>
 
@@ -49,9 +49,9 @@
   <disable_num_passes>True</disable_num_passes>
 
   <default_acquisition_values>
-    <exposure_time>3.000</exposure_time>
+    <exposure_time>0.100</exposure_time>
     <start_angle>0.0</start_angle>
-    <range>1.0</range>
+    <range>0.1</range>
     <number_of_passes>1</number_of_passes>
     <start_image_number>1</start_image_number>
     <run_number>1</run_number>
@@ -73,7 +73,7 @@
   </default_helical_values>
 
   <default_characterisation_values>
-    <exposure_time>5.000</exposure_time>
+    <exposure_time>1.000</exposure_time>
     <start_angle>0.0</start_angle>
     <range>1</range>
     <number_of_passes>1</number_of_passes>
