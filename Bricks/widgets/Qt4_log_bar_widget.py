@@ -36,6 +36,7 @@ class LogBarWidget(QtGui.QWidget):
         self.text_edit = QtGui.QTextEdit(self)
         #self.text_edit.setMinimumSize(QtCore.QSize(0, 100))
         #self.text_edit.setMaximumSize(QtCore.QSize(32767, 100))
+        self.text_edit.setMaximumHeight(75)
         self.text_edit.setAcceptRichText(True)
         #self.text_edit.setTextFormat(QtGui.QTextEdit.RichText)
         self.text_edit.setReadOnly(True)
