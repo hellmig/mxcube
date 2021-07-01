@@ -1,4 +1,4 @@
-<equipment class = "Cats90">
+<equipment class = "Cats144">
   <username>Cats</username>
   <tangoname>bl141/cats/1</tangoname>    
   <!-- specify the number of lids here to support different models-->
@@ -21,9 +21,9 @@
 
   <channel type="tango" name="_chnTotalLidState" polling="500">di_AllLidsClosed</channel>
 
-  <command type="tango" name="_cmdLoad">put_bcrd</command>
+  <command type="tango" name="_cmdLoad">put</command>
   <command type="tango" name="_cmdUnload">get</command>
-  <command type="tango" name="_cmdChainedLoad">getput_bcrd</command>
+  <command type="tango" name="_cmdChainedLoad">getput</command>
   <channel type="tango" name="_chnNumLoadedSample" polling="500">NumSampleOnDiff</channel>
   <channel type="tango" name="_chnLidLoadedSample" polling="500">LidSampleOnDiff</channel>
   <command type="tango" name="_cmdScanSample">barcode</command>
