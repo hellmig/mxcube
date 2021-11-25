@@ -42,6 +42,9 @@
        <property name="checkable">
         <bool>true</bool>
        </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
        <layout class="QHBoxLayout">
         <property name="spacing">
          <number>6</number>
