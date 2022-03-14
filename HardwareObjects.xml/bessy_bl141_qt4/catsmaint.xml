@@ -10,6 +10,7 @@
   <command type="tango" name="_cmdReset">reset</command>
   <command type="tango" name="_cmdBack">back</command>
   <command type="tango" name="_cmdSafe">safe</command>
+  <command type="tango" name="_cmdAbort">abort</command>
 
   <command type="tango" name="_cmdPowerOn">powerOn</command>
   <command type="tango" name="_cmdPowerOff">powerOff</command>

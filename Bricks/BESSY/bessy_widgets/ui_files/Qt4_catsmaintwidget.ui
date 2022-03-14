@@ -185,27 +185,56 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox13">
+    <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Recovery Commands</string>
+      <string>Maintenance commands</string>
      </property>
-     <layout class="QHBoxLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="btSoakTool">
         <property name="text">
-         <string>Soak Tool (remove blue plug!)</string>
+         <string>Soak (remove blue plug!)</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btDryTool">
         <property name="text">
-         <string>Dry Tool</string>
+         <string>Dry</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="btResetError">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>890</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox13">
+     <property name="title">
+      <string>Recovery Commands</string>
+     </property>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QPushButton" name="btAbort">
+        <property name="text">
+         <string>Abort</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btSafe">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -216,7 +245,7 @@
          <font/>
         </property>
         <property name="text">
-         <string>Reset Error</string>
+         <string>Safe</string>
         </property>
        </widget>
       </item>
@@ -244,7 +273,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="btSafe">
+       <widget class="QPushButton" name="btResetError">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -255,7 +284,7 @@
          <font/>
         </property>
         <property name="text">
-         <string>Safe</string>
+         <string>Reset Error</string>
         </property>
        </widget>
       </item>
@@ -316,9 +345,7 @@
   <tabstop>btLid2Close</tabstop>
   <tabstop>btLid3Open</tabstop>
   <tabstop>btLid3Close</tabstop>
-  <tabstop>btResetError</tabstop>
   <tabstop>btBackToolA</tabstop>
-  <tabstop>btSafe</tabstop>
  </tabstops>
  <resources/>
  <connections/>

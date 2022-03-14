@@ -39,6 +39,7 @@ class Qt4_CatsMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
         QtCore.QObject.connect(self.widget.btLid3Close, QtCore.SIGNAL('clicked()'), self._lid3Close)
         QtCore.QObject.connect(self.widget.btResetError, QtCore.SIGNAL('clicked()'), self._resetError)
         #QtCore.QObject.connect(self.widget.btBack, QtCore.SIGNAL('clicked()'), self._backTraj)                     
+        QtCore.QObject.connect(self.widget.btAbort, QtCore.SIGNAL('clicked()'), self._abort)                     
         QtCore.QObject.connect(self.widget.btSafe, QtCore.SIGNAL('clicked()'), self._safeTraj)                     
         QtCore.QObject.connect(self.widget.btRegulationOn, QtCore.SIGNAL('clicked()'), self._regulationOn)                     
         QtCore.QObject.connect(self.widget.btBackToolA, QtCore.SIGNAL('clicked()'), self._backToolATraj)                     
@@ -143,6 +144,7 @@ class Qt4_CatsMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
             self.widget.btResetError.setEnabled(False)
             #self.widget.btBack.setEnabled(False)
             self.widget.btSafe.setEnabled(False)
+            self.widget.btAbort.setEnabled(False)
             self.widget.btRegulationOn.setEnabled(False)
             self.widget.lblMessage.setText('')
             self.widget.btBackToolA.setEnabled(False)
@@ -157,6 +159,7 @@ class Qt4_CatsMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
             self.widget.btResetError.setEnabled(ready)
             #self.widget.btBack.setEnabled(ready and self._poweredOn)
             self.widget.btSafe.setEnabled(ready and self._poweredOn)
+            self.widget.btAbort.setEnabled(self._pathRunning and self._poweredOn)
 
             self.widget.btBackToolA.setEnabled(ready and self._poweredOn)
             self.widget.btBackToolB.setEnabled(ready and self._poweredOn)
@@ -295,6 +298,14 @@ class Qt4_CatsMaintBrick(BlissFramework.Qt4_BaseComponents.BlissWidget):
             if self.device is not None:
                 #self.device._doSafe()
                 self.device.safeTraj()
+        except:
+            QtGui.QMessageBox.warning( self, "Error",str(sys.exc_info()[1]))
+
+    def _abort(self):
+        logging.getLogger("user_level_log").info("CATS: Abort the currently running trajectory.")
+        try:
+            if self.device is not None:
+                self.device._doAbort()
         except:
             QtGui.QMessageBox.warning( self, "Error",str(sys.exc_info()[1]))
 
