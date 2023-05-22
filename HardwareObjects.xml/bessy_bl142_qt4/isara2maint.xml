@@ -1,0 +1,27 @@
+<equipment class = "Isara2Maint">
+  <username>Isara2Maint</username>
+  <tangoname>bl142/isara/2</tangoname>    
+
+  <command type="tango" name="_cmdDry">dry</command>
+  <command type="tango" name="_cmdSoak">soak</command>
+  
+  <command type="tango" name="_cmdReset">reset</command>
+  <command type="tango" name="_cmdBack">back</command>
+  <command type="tango" name="_cmdRecover">recover</command>
+  <command type="tango" name="_cmdAbort">abort</command>
+
+  <command type="tango" name="_cmdPowerOn">powerOn</command>
+  <command type="tango" name="_cmdPowerOff">powerOff</command>
+  <channel type="tango" name="_chnPowered" polling="500">Powered</channel>
+
+  <command type="tango" name="_cmdOpenLid1">openlid</command>
+  <command type="tango" name="_cmdCloseLid1">closelid</command>
+  <channel type="tango" name="_chnLid1State" polling="500">LidOpened</channel>
+
+  <command type="tango" name="_cmdRegulOn">regulon</command>
+  <channel type="tango" name="_chnLN2RegulationDewar1" polling="500">LN2Regulation</channel>
+
+  <channel type="tango" name="_chnPathRunning" polling="500">PathRunning</channel>
+  <channel type="tango" name="_chnMessage" polling="500">RobotMessage</channel>
+</equipment>
+

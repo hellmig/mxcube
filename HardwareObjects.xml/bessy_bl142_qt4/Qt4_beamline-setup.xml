@@ -3,8 +3,8 @@
   <object href="/attenuators" role="transmission"/>
   <object href="/beam_info" role="beam_info"/>
 
-  <object href="/grob" role="sample_changer_one"/>
-  <object href="/grob" role="sample_changer"/>
+  <object href="/isara2" role="sample_changer_one"/>
+  <object href="/isara2" role="sample_changer"/>
   <!--
   <object href="/plate-manipulator" role="sample_changer_two"/>
 

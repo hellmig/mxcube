@@ -1,0 +1,24 @@
+<equipment class = "Isara2">
+  <username>Isara2</username>
+  <tangoname>bl142/isara/2</tangoname>    
+ 
+  <channel type="tango" name="_chnState" polling="500">State</channel>
+  <channel type="tango" name="_chnPowered" polling="500">Powered</channel>
+  
+  <command type="tango" name="_cmdAbort">Abort</command>
+
+  <channel type="tango" name="_chnPuckPresence" polling="500">PuckPresence</channel>
+
+  <channel type="tango" name="_chnLidOpened" polling="500">LidOpened</channel>
+  
+  <command type="tango" name="_cmdLoad">Put</command>
+  <command type="tango" name="_cmdUnload">Get</command>
+  <command type="tango" name="_cmdChainedLoad">Getput</command>
+  <channel type="tango" name="_chnNumLoadedSample" polling="500">SampleNumberOnDiff</channel>
+  <channel type="tango" name="_chnPuckLoadedSample" polling="500">PuckNumberOnDiff</channel>
+  <command type="tango" name="_cmdScanSample">barcode</command>
+  <channel type="tango" name="_chnSampleBarcode" polling="500">Barcode</channel>
+  <channel type="tango" name="_chnPathRunning" polling="500">PathRunning</channel>
+  <channel type="tango" name="_chnSampleIsDetected" polling="500">SampleDetected</channel>
+</equipment>
+

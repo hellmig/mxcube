@@ -21,9 +21,9 @@
   <channel type="spec" version="esc142:spec" name="phase_position" polling="500">NANODIFF_CURRENT_PHASE</channel>
 
   <!-- added 2017-08-28-bessy-mh: transfer request handling , moved from GROB_SC-->
-  <samplechanger>/grob</samplechanger>
-  <channel type="tango" tangoname="bl142/grob/1" name="_chnLoadStateRequest" polling="500">do_SCLoadStateRequest</channel>
-  <channel type="tango" tangoname="bl142/grob/1" name="_chnUnloadStateRequest" polling="500">do_SCUnloadStateRequest</channel>
+  <samplechanger>/isara2</samplechanger>
+  <channel type="tango" tangoname="bl142/grob/SCLoadStateRequest" name="_chnLoadStateRequest" polling="500">State</channel>
+  <channel type="tango" tangoname="bl142/grob/SCUnloadStateRequest" name="_chnUnloadStateRequest" polling="500">State</channel>
 
   <command type="spec" version="esc142:spec" name="_cmdStartTransferPhase">start_transfer_phase</command>
   <command type="spec" version="esc142:spec" name="_cmdStartCentringPhase">start_centring_phase</command>
