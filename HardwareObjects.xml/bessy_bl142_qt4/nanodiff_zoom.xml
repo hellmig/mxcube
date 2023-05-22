@@ -15,7 +15,6 @@
         <pixelsPerMmZ>301</pixelsPerMmZ>
       </calibrationData>
     </position>
--->
     <position>
       <username>Zoom 2</username>
       <offset>2</offset>
@@ -34,6 +33,7 @@
         <pixelsPerMmZ>500</pixelsPerMmZ>
       </calibrationData>
     </position>
+-->
     <position>
       <username>Zoom 4</username>
       <offset>4</offset>
@@ -43,6 +43,7 @@
         <pixelsPerMmZ>654</pixelsPerMmZ>
       </calibrationData>
     </position>
+<!--
     <position>
       <username>Zoom 5</username>
       <offset>5</offset>
@@ -97,5 +98,6 @@
         <pixelsPerMmZ>3205</pixelsPerMmZ>
       </calibrationData>
     </position>
+-->
   </positions>
 </device>
