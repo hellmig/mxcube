@@ -34,6 +34,15 @@ from bessy_widgets.Qt4_dc_tree_widget import DataCollectTree
 from Qt4_sample_changer_helper import SC_STATE_COLOR, SampleChanger
 from bessy_widgets.Qt4_tree_options_dialog import TreeOptionsDialog
 
+# read samples from csv file , ISPyB Dummy, TH 24.05.2023
+import sys
+sys.path.append("/home/mxadm/mxcube/Bricks/BESSY/LimsSampleInput")
+try:
+    import Qt_SamplesFromFileWidgets as SamplesFromFileWidgets
+    ispyb_dummy = True
+except:
+    print("Module >Qt_SamplesFromFileWidgets< not found")
+    ispyb_dummy = False
 
 __category__ = 'General'
 
@@ -440,8 +449,13 @@ class Qt4_TreeBrick(BlissWidget):
         accordingly.
         """
         if True:
-            lims_client = self.lims_hwobj
-            samples = lims_client.get_samples(self.session_hwobj.proposal_id,
+            # TH 24.05.2023
+            if ispyb_dummy:
+                sort_window = SamplesFromFileWidgets.SortWindow()
+                samples = sort_window.select_and_sort()
+            else: # original code 
+                lims_client = self.lims_hwobj
+                samples = lims_client.get_samples(self.session_hwobj.proposal_id,
                                               self.session_hwobj.session_id)
             basket_list = []
             sample_list = []

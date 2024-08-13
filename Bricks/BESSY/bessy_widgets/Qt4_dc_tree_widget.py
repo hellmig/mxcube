@@ -1015,6 +1015,9 @@ class DataCollectTree(QtGui.QWidget):
                                              get_model_root(), basket)
             basket.set_enabled(False)
             for sample in sample_list:
+                 print("DEBUG")
+                 print(sample.location[0], basket.get_location())
+
                  if sample.location[0] == basket.get_location():
                      basket.add_sample(sample)
                      self.queue_model_hwobj.add_child(basket, sample)
