@@ -1,5 +1,7 @@
 <device class="MicrodiffMotor">
-  <username>Kappa phi</username>
-  <exporter_address>192.168.27.130:9001</exporter_address>
+  <username>Phi</username>
+  <exporter_address>172.31.212.130:9001</exporter_address>
   <motor_name>Phi</motor_name>
+  <unit>1e-3</unit>
+  <GUIstep>10.0</GUIstep>
 </device>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <equipment class="Microdiff">
-  <exporter_address>192.168.27.130:9001</exporter_address>
+  <exporter_address>172.31.212.130:9001</exporter_address>
   <username>Microdiff</username>
   <device role="camera" hwrid="/udiff_camera" />
   <phaseList>("Transfer", "Centring", "DataCollection", "BeamLocation")</phaseList>
@@ -60,6 +60,6 @@
   <command type="tango" name="start_centring_phase_cmd" tangoname="bl141/microdiff/general">StartManualSampleCentring</command>
   -->
 
-  <!-- <command type="tango" name="save_centring_positions" tangoname="tango://192.168.27.130:20000/bl141/microdiff/general#dbase=no">saveCentringPositions</command> -->
-  <command type="exporter" name="save_centring_positions" exporter_address="192.168.27.130:9001">saveCentringPositions</command>
+  <!-- <command type="tango" name="save_centring_positions" tangoname="tango://172.31.212.130:20000/bl141/microdiff/general#dbase=no">saveCentringPositions</command> -->
+  <command type="exporter" name="save_centring_positions" exporter_address="172.31.212.130:9001">saveCentringPositions</command>
 </equipment>

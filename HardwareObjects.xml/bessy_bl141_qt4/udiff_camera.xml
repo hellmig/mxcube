@@ -1,5 +1,7 @@
-<device class="BESSY141MD2Camera">
-  <username>Sample Video</username>
+<device class="Qt4_TangoLimaVideo">
+  <username>Arinax Bzoom</username>
+  <type>bzoom</type>
+  <encoding>rgb24</encoding>
+  <tangoname>tango://172.31.212.121:9999/md/oav/bzoom#dbase=no</tangoname>
   <interval>100</interval>
-  <command type="tango" name="get_image_cmd" tangoname="bl141/microdiff/general">getImageJPG</command>
 </device>
