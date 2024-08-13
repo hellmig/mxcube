@@ -23,5 +23,6 @@
 
   <channel type="tango" name="_chnPathRunning" polling="500">PathRunning</channel>
   <channel type="tango" name="_chnMessage" polling="500">RobotMessage</channel>
+  <command type="tango" name="_cmdStatus">Status</command>
 </equipment>
 

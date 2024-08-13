@@ -29,4 +29,8 @@
   <command type="spec" version="esc142:spec" name="_cmdStartCentringPhase">start_centring_phase</command>
   <channel type="spec" version="esc142:spec" name="_chnNanodiffCurrentPhase" polling="500">NANODIFF_CURRENT_PHASE</channel>
   <!-- 2017-08-28-bessy-mh: transfer request handling end -->
+  
+  <!-- added 2023-06-15-bessy-mh: handling phase change to centring with Isara2-->
+  <channel type="tango" tangoname="bl142/isara/2" name="_chnSampleDetected" polling="500">SampleDetected</channel>
+  <channel type="tango" tangoname="bl142/grob/SCArmIsOutOfGonioArea" name="_chnSCOutOfGonioArea" polling="500">State</channel>
 </equipment>
