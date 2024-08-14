@@ -1,5 +1,5 @@
 <object class="MicrodiffAperture">
-  <exporter_address>192.168.27.140:9001</exporter_address>
+  <exporter_address>172.31.212.140:9001</exporter_address>
   <diameter>
     <name>200</name>
     <size>0.200</size>

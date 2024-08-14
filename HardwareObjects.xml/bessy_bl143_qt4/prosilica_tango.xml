@@ -1,7 +1,9 @@
-<device class = "CameraNoMmap">
-  <username>Prosilica VideoCam</username>
-  <tangoname>bl143/liveviewer/prosilica</tangoname>
-  <interval>10</interval>
-  <imagetype>jpeg</imagetype>
+<device class="Qt4_TangoLimaVideo">
+  <username>Prosilica GC1350C</username>
+  <type>prosilica</type>
+  <encoding>rgb24</encoding>
+  <tangoname>bl143/lima/oav</tangoname>
+  <!-- <gain>0.5</gain> -->
+  <exposure>0.1</exposure>
+  <interval>30</interval>
 </device>
-
