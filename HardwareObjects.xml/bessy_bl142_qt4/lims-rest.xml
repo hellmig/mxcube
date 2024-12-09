@@ -1,0 +1,28 @@
+<object class="ISPyBRestClient">
+	<object href="/session" role="session"/>
+	<restRoot>http://172.31.212.40:8080/ispyb/ispyb-ws/rest/</restRoot>
+	<api_url>http://172.31.212.40:8080/ispyb/ispyb-ws/rest/</api_url>
+
+	<exi_root>http://172.31.212.40:8081/</exi_root>
+	<base_result_url>http://172.31.212.40:8081/</base_result_url>
+	<site>HZB</site>
+
+	<restUsername>mx440</restUsername>
+	<restPass>test</restPass>
+ 	<beamline_name>BL14.2</beamline_name>
+
+	<proposals>
+		<proposal>
+			<code>MX</code>
+			<ispyb>fx</ispyb>
+			<gui>fx</gui>
+		</proposal>
+	</proposals>
+
+	<inhouse>
+		<proposal>
+			<code>opid</code>
+			<number>231</number>
+		</proposal>
+	</inhouse>
+</object>

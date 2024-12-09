@@ -63,7 +63,7 @@ class Qt4_ProposalBrick2(BlissWidget):
         BlissWidget.__init__(self, *args)
 
         # Hardware objects ----------------------------------------------------
-        self.lims_hwobj = None
+	self.lims_hwobj = None
         self.local_login_hwobj = None
         self.session_hwobj = None
 
@@ -477,6 +477,9 @@ class Qt4_ProposalBrick2(BlissWidget):
                    user_name = os.getenv("SUDO_USER")
                else:
                    user_name = os.getenv("USER")
+
+		   # David James: Made this hardcoded edit for testing purposes
+		   user_name = "james"
                self._do_login_as_user(user_name)
 
         start_server_event = ProposalGUIEvent(self.startServers,())
@@ -621,7 +624,11 @@ class Qt4_ProposalBrick2(BlissWidget):
         elif property_name == 'localLogin':
             self.local_login_hwobj = self.getHardwareObject(new_value)
         elif property_name == 'dbConnection':
-            self.lims_hwobj = self.getHardwareObject(new_value)
+	    # David James: The lims hwobj already exists, don't create a new one, instead 
+	    # root the MXCuBE session into the existing environment
+            # self.lims_hwobj = self.getHardwareObject(new_value)
+	    self.lims_hwobj = self.getHardwareObject("/lims")
+
             self.login_as_user = (self.lims_hwobj is None) or (self.lims_hwobj.get_login_type() == "user")
             if self.login_as_user:
                self.login_as_user_widget.show()

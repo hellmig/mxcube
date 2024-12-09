@@ -7,7 +7,7 @@
   <object href="/attenuators" role="transmission"/>
   <object href="/pilatus" role="detector"/>
   <object href="/resolution" role="resolution"/>
-  <object href="/lims-client-mockup" role="dbserver"/> 
+  <object href="/lims" role="dbserver"/> 
   <object href="/safshut" role="safety_shutter"/> 
   <object href="/flux" role="flux"/> 
   <!-- <object href="/cryospy" role="cryo_stream"/> -->

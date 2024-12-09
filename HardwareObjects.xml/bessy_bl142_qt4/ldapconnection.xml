@@ -1,0 +1,5 @@
+<procedure class="LdapLogin">
+	<ldaphost>vsrv9.exp1401.bessy.de</ldaphost>
+	<ldapport>389</ldapport>
+	<ldapstring>ou=People,dc=psf,dc=bessy,dc=de</ldapstring>
+</procedure>

@@ -20,7 +20,7 @@
 
   <!-- collection methods -->
   <object href="/Qt4_mxcollect" role="collect"/>
-  <object href="/lims-client-mockup" role="lims_client"/>
+  <object href="/lims" role="lims_client"/>
   <object href="/energyscan_abstract" role="energyscan"/>
   <object href="/xrfspectrum" role="xrf_spectrum"/>
   <object href="/data-analysis" role="data_analysis"/>

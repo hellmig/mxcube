@@ -969,10 +969,8 @@ class DataCollectTree(QtGui.QWidget):
 
             if sample.lims_code:
                 barcode_samples[sample.lims_code] = sample
-                
             if sample.lims_location:
                 location_samples[sample.lims_location] = sample
-            
         return (barcode_samples, location_samples)
 
     def enqueue_samples(self, sample_list):

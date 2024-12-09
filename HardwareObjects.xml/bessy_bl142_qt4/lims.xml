@@ -1,0 +1,11 @@
+<object class="ISPyBClient">
+  <object href="/session" role="session"/>
+  <object href="/ldapconnection" role="ldapServer"/>
+  <object href="/icat-client" role="icat_client"/>
+  <ws_root>http://172.31.212.40:8080/ispyb/ispyb-ws/ispybWS/</ws_root>
+  <ws_username>mxcube</ws_username>
+  <ws_password>mxcube</ws_password>
+  <authServerType>skip</authServerType>
+  <loginType>user</loginType>
+  <beamline_name>BL14.2</beamline_name>
+</object>
